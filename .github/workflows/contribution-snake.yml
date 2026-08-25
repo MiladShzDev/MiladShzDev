@@ -20,11 +20,11 @@ jobs:
             github-snake.svg?palette=github-light
             github-snake-dark.svg?palette=github-dark
 
-      - name: Publish generated assets
+      - name: Publish generated visualization
         uses: crazy-max/ghaction-github-pages@v4
         with:
+          target_branch: output
           build_dir: dist
-          jekyll: false
-          build_commit_message: "chore: update contribution visualization"
+          keep_history: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
