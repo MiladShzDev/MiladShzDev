@@ -82,19 +82,15 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 <div align="center">
 
-<p>
-  <strong>My contribution history, visualized as a live GitHub activity animation.</strong>
-</p>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MiladShzDev/MiladShzDev/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MiladShzDev/MiladShzDev/output/github-snake.svg" />
-  <img src="https://raw.githubusercontent.com/MiladShzDev/MiladShzDev/output/github-snake.svg" alt="GitHub contribution activity animation" />
-</picture>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Milad%27s%20Contribution%20Activity" alt="GitHub contribution activity graph" />
 
 </div>
 
-> The native GitHub contribution calendar remains the source of truth; this visualization is a visual layer built from the same contribution activity.
+<div align="center">
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=MiladShzDev&hide_border=true&theme=github-dark-blue" alt="GitHub contribution streak" />
+
+</div>
 
 ---
 
@@ -104,12 +100,6 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 <img src="https://github-readme-stats.vercel.app/api?username=MiladShzDev&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true" height="165" alt="GitHub stats" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MiladShzDev&layout=compact&hide_border=true&langs_count=8" height="165" alt="Top languages" />
-
-</div>
-
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=MiladShzDev&hide_border=true" alt="GitHub streak" />
 
 </div>
 
