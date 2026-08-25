@@ -7,7 +7,7 @@ on:
       - assets/github-snake.svg
       - assets/github-snake-dark.svg
   schedule:
-    - cron: "17 0 * * *"
+    - cron: "23 0 * * *"
   workflow_dispatch:
 
 permissions:
