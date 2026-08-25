@@ -1,78 +1,68 @@
-# Hi, I'm Milad Dehbozorgi 👋
+# Milad Dehbozorgi
 
 ### Senior Flutter Developer · Django/FastAPI Developer · Next.js Developer
 
-I'm a software engineer focused on building scalable, production-ready applications across mobile, web, backend, and cross-platform ecosystems.
+I build production-grade applications and backend systems across **mobile, web, backend, and AI-powered platforms**.
 
-I specialize in **Flutter/Dart**, **Python backend development with Django & FastAPI**, and **modern web development with Next.js & TypeScript**.
-
----
-
-## 🚀 What I Build
-
-- 📱 Cross-platform mobile applications with Flutter
-- 🌐 Modern web applications with Next.js & TypeScript
-- ⚙️ Scalable backend systems with Django & FastAPI
-- 🔌 REST APIs, WebSockets, and realtime systems
-- 🗄️ PostgreSQL, Redis, and distributed application architectures
-- 🤖 AI-powered applications and intelligent automation
-- 🖥️ Cross-platform desktop applications
-- ☁️ Cloud-native and containerized services
+My main focus is turning product ideas into scalable software with strong architecture, clean APIs, realtime communication, and cross-platform experiences.
 
 ---
 
-## 🧑‍💻 Core Technologies
+## ⚡ Core Expertise
 
-### Mobile & Cross-Platform
+**Mobile & Cross-Platform**
 
 `Flutter` `Dart` `Android` `iOS` `macOS` `Windows` `Linux`
 
-### Backend
+**Backend Engineering**
 
-`Python` `Django` `Django REST Framework` `FastAPI`
+`Python` `Django` `Django REST Framework` `FastAPI` `REST API` `WebSocket`
 
-### Frontend
+**Web Engineering**
 
 `Next.js` `React` `TypeScript` `JavaScript`
 
-### Data & Infrastructure
+**Data & Infrastructure**
 
 `PostgreSQL` `Redis` `Docker` `Linux` `GitHub Actions`
 
-### Architecture & Engineering
+**Architecture**
 
-`REST API` `WebSocket` `Clean Architecture` `Domain-Driven Design` `Distributed Systems` `Microservices`
+`Clean Architecture` `Distributed Systems` `Microservices` `Realtime Systems` `Event-Driven Architecture`
 
-### AI & Automation
+**AI & Automation**
 
 `LLM Integration` `AI Agents` `Automation` `Local AI` `Cloud AI`
 
 ---
 
-## 🏗️ Current Focus
+## 🚀 Featured Work
 
-I'm currently focused on building advanced software systems that combine:
+### [AI OS](https://github.com/MiladShzDev/ai-os)
 
-**AI + Mobile + Web + Backend + Automation + Distributed Systems**
+A cross-platform, offline-first agent platform designed around natural-language control of applications, devices, browsers, IoT systems, TVs, and connected services.
 
-One of my current projects is **AI OS** — a cross-platform agent platform designed to let users control applications, devices, browsers, IoT systems, and connected services through natural-language commands.
+**Focus:** AI agents · Flutter · Next.js · FastAPI · PostgreSQL · Redis · WebSocket · automation
 
----
+### [Awesome Gauges](https://github.com/MiladShzDev/awesome_gauges)
 
-## 📌 Areas of Expertise
+A Flutter package for building customizable curve, horizontal, and vertical gauge components.
 
-| Area | Focus |
-|---|---|
-| Flutter | Production mobile & cross-platform applications |
-| Django | Robust backend platforms and APIs |
-| FastAPI | High-performance async services |
-| Next.js | Modern full-stack web applications |
-| AI | LLM-powered applications and intelligent agents |
-| Systems | Distributed, realtime, and automation systems |
+**Focus:** Flutter · Dart · reusable UI components · package development
 
 ---
 
-## 📊 GitHub
+## 🏗️ Current Direction
+
+I'm currently focused on combining:
+
+**AI + Flutter + Python Backend + Next.js + Automation + Distributed Systems**
+
+My goal is to build software systems that are not only functional, but also maintainable, scalable, and designed for long-term evolution.
+
+---
+
+## 📈 GitHub
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MiladShzDev&show_icons=true&hide_border=true&count_private=true)
 
@@ -80,11 +70,9 @@ One of my current projects is **AI OS** — a cross-platform agent platform desi
 
 ---
 
-## 🤝 Let's Connect
+## 🤝 Connect
 
-I'm interested in software engineering, AI systems, developer tooling, distributed systems, automation, and building ambitious products.
-
-**GitHub:** [@MiladShzDev](https://github.com/MiladShzDev)
+[![GitHub](https://img.shields.io/badge/GitHub-MiladShzDev-181717?style=flat-square&logo=github)](https://github.com/MiladShzDev)
 
 ---
 
