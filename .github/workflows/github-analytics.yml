@@ -1,0 +1,154 @@
+name: GitHub Analytics
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - assets/github-stats-card.svg
+      - assets/github-languages-card.svg
+  schedule:
+    - cron: "37 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Generate analytics cards
+        env:
+          GH_PROFILE_TOKEN: ${{ secrets.GH_PROFILE_TOKEN }}
+        run: |
+          python3 - <<'PY'
+          from __future__ import annotations
+          import datetime as dt
+          import html
+          import math
+          import os
+          from pathlib import Path
+
+          import requests
+
+          USER = "MiladShzDev"
+          TOKEN = os.environ.get("GH_PROFILE_TOKEN") or os.environ.get("GITHUB_TOKEN")
+          H = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+          if TOKEN:
+              H["Authorization"] = f"Bearer {TOKEN}"
+
+          def get(url, **kwargs):
+              r = requests.get(url, headers=H, timeout=20, **kwargs)
+              r.raise_for_status()
+              return r.json()
+
+          repos = get(f"https://api.github.com/users/{USER}/repos", params={"per_page": 100, "type": "owner", "sort": "updated"})
+          repos = [r for r in repos if not r.get("fork") and not r.get("archived")]
+
+          total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+          total_forks = sum(r.get("forks_count", 0) for r in repos)
+          followers = get(f"https://api.github.com/users/{USER}").get("followers", 0)
+
+          language_bytes = {}
+          for repo in repos:
+              try:
+                  data = get(f"https://api.github.com/repos/{USER}/{repo['name']}/languages")
+              except Exception:
+                  continue
+              for lang, amount in data.items():
+                  language_bytes[lang] = language_bytes.get(lang, 0) + amount
+
+          ranked = sorted(language_bytes.items(), key=lambda x: x[1], reverse=True)[:8]
+          total_bytes = sum(v for _, v in ranked) or 1
+          languages = [(name, value / total_bytes * 100) for name, value in ranked]
+
+          now = dt.datetime.now(dt.timezone.utc)
+          year_start = now - dt.timedelta(days=365)
+          query = '''
+          query($login:String!, $from:DateTime!, $to:DateTime!) {
+            user(login:$login) {
+              contributionsCollection(from:$from, to:$to) {
+                totalCommitContributions
+                totalPullRequestContributions
+                totalIssueContributions
+                totalRepositoryContributions
+              }
+            }
+          }
+          '''
+          contributions = {"totalCommitContributions": 0, "totalPullRequestContributions": 0, "totalIssueContributions": 0, "totalRepositoryContributions": 0}
+          try:
+              r = requests.post("https://api.github.com/graphql", headers=H, json={"query": query, "variables": {"login": USER, "from": year_start.isoformat(), "to": now.isoformat()}}, timeout=20)
+              if r.ok:
+                  contributions.update((r.json().get("data", {}).get("user", {}) or {}).get("contributionsCollection", {}) or {})
+          except Exception:
+              pass
+
+          def esc(s: str) -> str:
+              return html.escape(str(s), quote=True)
+
+          stat_items = [
+              ("REPOSITORIES", len(repos), "#58a6ff"),
+              ("STARS", total_stars, "#f2cc60"),
+              ("FORKS", total_forks, "#a371f7"),
+              ("COMMITS · 1Y", contributions["totalCommitContributions"], "#3fb950"),
+              ("PULL REQUESTS · 1Y", contributions["totalPullRequestContributions"], "#f0883e"),
+              ("ISSUES · 1Y", contributions["totalIssueContributions"], "#db61a2"),
+          ]
+
+          def stat_svg():
+              W,HGT = 1100, 360
+              out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{HGT}" viewBox="0 0 {W} {HGT}">',
+                     '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
+                     '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My GitHub Statistics</text>',
+                     '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Live profile metrics • rolling 365-day contribution window</text>']
+              for i,(label,val,accent) in enumerate(stat_items):
+                  row, col = divmod(i, 3)
+                  x = 34 + col*348
+                  y = 105 + row*112
+                  out += [f'<rect x="{x}" y="{y}" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>',
+                          f'<circle cx="{x+24}" cy="{y+26}" r="6" fill="{accent}"/>',
+                          f'<text x="{x+40}" y="{y+31}" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(label)}</text>',
+                          f'<text x="{x+20}" y="{y+65}" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{val:,}</text>']
+              out.append('</svg>')
+              return '\n'.join(out)
+
+          palette = ["#58a6ff", "#3fb950", "#f2cc60", "#a371f7", "#f0883e", "#db61a2", "#79c0ff", "#56d364"]
+
+          def lang_svg():
+              W,HGT = 1100, max(320, 118 + len(languages)*46)
+              out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{HGT}" viewBox="0 0 {W} {HGT}">',
+                     '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
+                     '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My Programming Languages</text>',
+                     '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Share of tracked source-code bytes across owned, non-fork repositories</text>']
+              bar_x, bar_w = 280, 700
+              for i,(name,pct) in enumerate(languages):
+                  y = 112 + i*46
+                  color = palette[i % len(palette)]
+                  pct_txt = f"{pct:.2f}%"
+                  out += [f'<text x="42" y="{y+15}" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">{esc(name)}</text>',
+                          f'<rect x="{bar_x}" y="{y}" width="{bar_w}" height="18" rx="9" fill="#21262d"/>',
+                          f'<rect x="{bar_x}" y="{y}" width="{max(4, bar_w*pct/100):.1f}" height="18" rx="9" fill="{color}"/>',
+                          f'<text x="1010" y="{y+15}" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(pct_txt)}</text>']
+              out += ['</svg>']
+              return '\n'.join(out)
+
+          Path("assets").mkdir(exist_ok=True)
+          Path("assets/github-stats-card.svg").write_text(stat_svg(), encoding="utf-8")
+          Path("assets/github-languages-card.svg").write_text(lang_svg(), encoding="utf-8")
+          PY
+
+      - name: Commit analytics assets
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/github-stats-card.svg assets/github-languages-card.svg
+          if git diff --cached --quiet; then
+            echo "No analytics changes."
+            exit 0
+          fi
+          git commit -m "chore: update GitHub analytics cards"
+          git push
