@@ -2,7 +2,7 @@
 
 ### Senior Flutter Developer · Django/FastAPI Developer · Next.js Developer
 
-I build production-grade applications and backend systems across **mobile, web, backend, and AI-powered platforms**.
+I build production-grade applications and backend systems across **mobile, web, backend, and automation platforms**.
 
 My main focus is turning product ideas into scalable software with strong architecture, clean APIs, realtime communication, and cross-platform experiences.
 
@@ -30,19 +30,13 @@ My main focus is turning product ideas into scalable software with strong archit
 
 `Clean Architecture` `Distributed Systems` `Microservices` `Realtime Systems` `Event-Driven Architecture`
 
-**AI & Automation**
+**Automation**
 
-`LLM Integration` `AI Agents` `Automation` `Local AI` `Cloud AI`
+`API Integration` `Workflow Automation` `Background Jobs` `System Integration`
 
 ---
 
 ## 🚀 Featured Work
-
-### [AI OS](https://github.com/MiladShzDev/ai-os)
-
-A cross-platform, offline-first agent platform designed around natural-language control of applications, devices, browsers, IoT systems, TVs, and connected services.
-
-**Focus:** AI agents · Flutter · Next.js · FastAPI · PostgreSQL · Redis · WebSocket · automation
 
 ### [Awesome Gauges](https://github.com/MiladShzDev/awesome_gauges)
 
@@ -56,7 +50,7 @@ A Flutter package for building customizable curve, horizontal, and vertical gaug
 
 I'm currently focused on combining:
 
-**AI + Flutter + Python Backend + Next.js + Automation + Distributed Systems**
+**Flutter + Python Backend + Next.js + Automation + Distributed Systems**
 
 My goal is to build software systems that are not only functional, but also maintainable, scalable, and designed for long-term evolution.
 
