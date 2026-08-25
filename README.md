@@ -82,13 +82,9 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 <div align="center">
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Milad%27s%20Contribution%20Activity" alt="GitHub contribution activity graph" />
-
-</div>
-
-<div align="center">
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=MiladShzDev&hide_border=true&theme=github-dark-blue" alt="GitHub contribution streak" />
+<a href="https://github.com/MiladShzDev">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="GitHub contribution activity graph" />
+</a>
 
 </div>
 
@@ -100,6 +96,12 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 <img src="https://github-readme-stats.vercel.app/api?username=MiladShzDev&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true" height="165" alt="GitHub stats" />
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MiladShzDev&layout=compact&hide_border=true&langs_count=8" height="165" alt="Top languages" />
+
+</div>
+
+<div align="center">
+
+<img src="https://streak-stats.demolab.com?user=MiladShzDev&hide_border=true" alt="GitHub streak" />
 
 </div>
 
