@@ -59,46 +59,87 @@ I care about clean boundaries, dependable APIs, realtime communication, develope
 
 ---
 
-## ⚡ Core Stack
+## 🛠 My Skills
 
-<div align="center">
+### Languages
 
-<table>
-<tr>
-<td align="center"><img src="https://skillicons.dev/icons?i=flutter" height="34" alt="Flutter" />&nbsp;&nbsp;<b>Flutter</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=dart" height="34" alt="Dart" />&nbsp;&nbsp;<b>Dart</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=python" height="34" alt="Python" />&nbsp;&nbsp;<b>Python</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=django" height="34" alt="Django" />&nbsp;&nbsp;<b>Django</b></td>
-</tr>
-<tr>
-<td align="center"><img src="https://skillicons.dev/icons?i=fastapi" height="34" alt="FastAPI" />&nbsp;&nbsp;<b>FastAPI</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=nextjs" height="34" alt="Next.js" />&nbsp;&nbsp;<b>Next.js</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=react" height="34" alt="React" />&nbsp;&nbsp;<b>React</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=ts" height="34" alt="TypeScript" />&nbsp;&nbsp;<b>TypeScript</b></td>
-</tr>
-<tr>
-<td align="center"><img src="https://skillicons.dev/icons?i=js" height="34" alt="JavaScript" />&nbsp;&nbsp;<b>JavaScript</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=postgres" height="34" alt="PostgreSQL" />&nbsp;&nbsp;<b>PostgreSQL</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=redis" height="34" alt="Redis" />&nbsp;&nbsp;<b>Redis</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=firebase" height="34" alt="Firebase" />&nbsp;&nbsp;<b>Firebase</b></td>
-</tr>
-<tr>
-<td align="center"><img src="https://skillicons.dev/icons?i=sqlite" height="34" alt="SQLite" />&nbsp;&nbsp;<b>SQLite</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=docker" height="34" alt="Docker" />&nbsp;&nbsp;<b>Docker</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=linux" height="34" alt="Linux" />&nbsp;&nbsp;<b>Linux</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=githubactions" height="34" alt="GitHub Actions" />&nbsp;&nbsp;<b>GitHub Actions</b></td>
-</tr>
-<tr>
-<td align="center"><img src="https://skillicons.dev/icons?i=git" height="34" alt="Git" />&nbsp;&nbsp;<b>Git</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=android" height="34" alt="Android" />&nbsp;&nbsp;<b>Android</b></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=apple" height="34" alt="iOS" />&nbsp;&nbsp;<b>iOS</b></td>
-<td align="center"><b>REST APIs</b>&nbsp;&nbsp;·&nbsp;&nbsp;<b>WebSockets</b></td>
-</tr>
-</table>
+<p>
+  <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
+</p>
 
-</div>
+### Mobile Development
 
-### 🏛️ Architecture & Engineering
+<p>
+  <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />
+  <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />
+  <img src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS" />
+</p>
+
+### Backend
+
+<p>
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />
+  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/Django%20REST%20Framework-A30000?style=for-the-badge&logo=django&logoColor=white" alt="Django REST Framework" />
+  <img src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery" />
+</p>
+
+### Frontend
+
+<p>
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+</p>
+
+### Databases & Data
+
+<p>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />
+  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />
+  <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
+</p>
+
+### Realtime, APIs & Integration
+
+<p>
+  <img src="https://img.shields.io/badge/REST%20API-005571?style=for-the-badge&logo=openapiinitiative&logoColor=white" alt="REST API" />
+  <img src="https://img.shields.io/badge/WebSockets-111111?style=for-the-badge&logo=socketdotio&logoColor=white" alt="WebSockets" />
+  <img src="https://img.shields.io/badge/OpenAPI-6BA539?style=for-the-badge&logo=openapiinitiative&logoColor=white" alt="OpenAPI" />
+  <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
+</p>
+
+### DevOps & Infrastructure
+
+<p>
+  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
+</p>
+
+### Testing & Quality
+
+<p>
+  <img src="https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="Pytest" />
+  <img src="https://img.shields.io/badge/Flutter%20Test-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter Test" />
+  <img src="https://img.shields.io/badge/API%20Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="API Testing" />
+</p>
+
+### Development Tools
+
+<p>
+  <img src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code" />
+  <img src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" alt="Android Studio" />
+  <img src="https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white" alt="Xcode" />
+  <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
+</p>
+
+### Architecture & Engineering
 
 <div align="center">
 
