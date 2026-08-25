@@ -65,90 +65,34 @@ I care about clean boundaries, dependable APIs, realtime communication, develope
 
 <table>
 <tr>
-<td align="center" valign="top" width="25%">
-
-### 📱 Mobile
-
-**Flutter**  
-<img src="https://skillicons.dev/icons?i=flutter" height="34" alt="Flutter" />
-
-**Dart**  
-<img src="https://skillicons.dev/icons?i=dart" height="34" alt="Dart" />
-
-**Android**  
-<img src="https://skillicons.dev/icons?i=android" height="34" alt="Android" />
-
-**iOS**  
-<img src="https://skillicons.dev/icons?i=apple" height="34" alt="iOS" />
-
-</td>
-
-<td align="center" valign="top" width="25%">
-
-### ⚙️ Backend
-
-**Python**  
-<img src="https://skillicons.dev/icons?i=python" height="34" alt="Python" />
-
-**Django**  
-<img src="https://skillicons.dev/icons?i=django" height="34" alt="Django" />
-
-**FastAPI**  
-<img src="https://skillicons.dev/icons?i=fastapi" height="34" alt="FastAPI" />
-
-**Redis**  
-<img src="https://skillicons.dev/icons?i=redis" height="34" alt="Redis" />
-
-</td>
-
-<td align="center" valign="top" width="25%">
-
-### 🌐 Web
-
-**Next.js**  
-<img src="https://skillicons.dev/icons?i=nextjs" height="34" alt="Next.js" />
-
-**React**  
-<img src="https://skillicons.dev/icons?i=react" height="34" alt="React" />
-
-**TypeScript**  
-<img src="https://skillicons.dev/icons?i=ts" height="34" alt="TypeScript" />
-
-**JavaScript**  
-<img src="https://skillicons.dev/icons?i=js" height="34" alt="JavaScript" />
-
-</td>
-
-<td align="center" valign="top" width="25%">
-
-### 🏗️ Platform
-
-**PostgreSQL**  
-<img src="https://skillicons.dev/icons?i=postgres" height="34" alt="PostgreSQL" />
-
-**Docker**  
-<img src="https://skillicons.dev/icons?i=docker" height="34" alt="Docker" />
-
-**Linux**  
-<img src="https://skillicons.dev/icons?i=linux" height="34" alt="Linux" />
-
-**GitHub Actions**  
-<img src="https://skillicons.dev/icons?i=githubactions" height="34" alt="GitHub Actions" />
-
-</td>
+<td align="center"><img src="https://skillicons.dev/icons?i=flutter" height="34" alt="Flutter" />&nbsp;&nbsp;<b>Flutter</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=dart" height="34" alt="Dart" />&nbsp;&nbsp;<b>Dart</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=python" height="34" alt="Python" />&nbsp;&nbsp;<b>Python</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=django" height="34" alt="Django" />&nbsp;&nbsp;<b>Django</b></td>
 </tr>
-</table>
-
-<br/>
-
-<table>
 <tr>
-<td align="center"><b>🔥 Firebase</b></td>
-<td align="center"><b>🗃️ SQLite</b></td>
-<td align="center"><b>🌿 Git</b></td>
-<td align="center"><b>🔌 REST APIs</b></td>
-<td align="center"><b>⚡ WebSockets</b></td>
-<td align="center"><b>🔄 Background Jobs</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=fastapi" height="34" alt="FastAPI" />&nbsp;&nbsp;<b>FastAPI</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=nextjs" height="34" alt="Next.js" />&nbsp;&nbsp;<b>Next.js</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=react" height="34" alt="React" />&nbsp;&nbsp;<b>React</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=ts" height="34" alt="TypeScript" />&nbsp;&nbsp;<b>TypeScript</b></td>
+</tr>
+<tr>
+<td align="center"><img src="https://skillicons.dev/icons?i=js" height="34" alt="JavaScript" />&nbsp;&nbsp;<b>JavaScript</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=postgres" height="34" alt="PostgreSQL" />&nbsp;&nbsp;<b>PostgreSQL</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=redis" height="34" alt="Redis" />&nbsp;&nbsp;<b>Redis</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=firebase" height="34" alt="Firebase" />&nbsp;&nbsp;<b>Firebase</b></td>
+</tr>
+<tr>
+<td align="center"><img src="https://skillicons.dev/icons?i=sqlite" height="34" alt="SQLite" />&nbsp;&nbsp;<b>SQLite</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=docker" height="34" alt="Docker" />&nbsp;&nbsp;<b>Docker</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=linux" height="34" alt="Linux" />&nbsp;&nbsp;<b>Linux</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=githubactions" height="34" alt="GitHub Actions" />&nbsp;&nbsp;<b>GitHub Actions</b></td>
+</tr>
+<tr>
+<td align="center"><img src="https://skillicons.dev/icons?i=git" height="34" alt="Git" />&nbsp;&nbsp;<b>Git</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=android" height="34" alt="Android" />&nbsp;&nbsp;<b>Android</b></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=apple" height="34" alt="iOS" />&nbsp;&nbsp;<b>iOS</b></td>
+<td align="center"><b>REST APIs</b>&nbsp;&nbsp;·&nbsp;&nbsp;<b>WebSockets</b></td>
 </tr>
 </table>
 
