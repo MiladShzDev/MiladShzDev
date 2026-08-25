@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="500" viewBox="0 0 1100 500"><rect width="1100" height="500" rx="24" fill="#0d1117"/><text x="42" y="52" fill="#f0f6fc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">My Programming Languages</text><text x="42" y="80" fill="#8b949e" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Language distribution is updating from GitHub</text><text x="550" y="250" text-anchor="middle" fill="#58a6ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Horizontal percentage chart will appear automatically</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="394" viewBox="0 0 1100 394">
+<rect width="100%" height="100%" rx="24" fill="#0d1117"/>
+<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My Programming Languages</text>
+<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Share of tracked source-code bytes across owned, non-fork repositories</text>
+<text x="42" y="127" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">JavaScript</text>
+<rect x="280" y="112" width="700" height="18" rx="9" fill="#21262d"/>
+<rect x="280" y="112" width="684.1" height="18" rx="9" fill="#58a6ff"/>
+<text x="1010" y="127" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">97.72%</text>
+<text x="42" y="173" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">Dart</text>
+<rect x="280" y="158" width="700" height="18" rx="9" fill="#21262d"/>
+<rect x="280" y="158" width="14.9" height="18" rx="9" fill="#3fb950"/>
+<text x="1010" y="173" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">2.13%</text>
+<text x="42" y="219" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">HTML</text>
+<rect x="280" y="204" width="700" height="18" rx="9" fill="#21262d"/>
+<rect x="280" y="204" width="4.0" height="18" rx="9" fill="#f2cc60"/>
+<text x="1010" y="219" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">0.11%</text>
+<text x="42" y="265" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">Swift</text>
+<rect x="280" y="250" width="700" height="18" rx="9" fill="#21262d"/>
+<rect x="280" y="250" width="4.0" height="18" rx="9" fill="#a371f7"/>
+<text x="1010" y="265" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">0.03%</text>
+<text x="42" y="311" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">Kotlin</text>
+<rect x="280" y="296" width="700" height="18" rx="9" fill="#21262d"/>
+<rect x="280" y="296" width="4.0" height="18" rx="9" fill="#f0883e"/>
+<text x="1010" y="311" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">0.01%</text>
+<text x="42" y="357" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">Objective-C</text>
+<rect x="280" y="342" width="700" height="18" rx="9" fill="#21262d"/>
+<rect x="280" y="342" width="4.0" height="18" rx="9" fill="#db61a2"/>
+<text x="1010" y="357" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">0.00%</text>
+</svg>

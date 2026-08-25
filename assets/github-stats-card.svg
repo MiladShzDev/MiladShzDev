@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360"><rect width="1100" height="360" rx="24" fill="#0d1117"/><text x="42" y="52" fill="#f0f6fc" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="24" font-weight="700">My GitHub Statistics</text><text x="42" y="80" fill="#8b949e" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14">Analytics card is updating from GitHub</text><text x="550" y="190" text-anchor="middle" fill="#58a6ff" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700">Live metrics will appear automatically</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="360" viewBox="0 0 1100 360">
+<rect width="100%" height="100%" rx="24" fill="#0d1117"/>
+<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My GitHub Statistics</text>
+<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Live profile metrics • rolling 365-day contribution window</text>
+<rect x="34" y="105" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>
+<circle cx="58" cy="131" r="6" fill="#58a6ff"/>
+<text x="74" y="136" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">REPOSITORIES</text>
+<text x="54" y="170" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">4</text>
+<rect x="382" y="105" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>
+<circle cx="406" cy="131" r="6" fill="#f2cc60"/>
+<text x="422" y="136" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">STARS</text>
+<text x="402" y="170" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0</text>
+<rect x="730" y="105" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>
+<circle cx="754" cy="131" r="6" fill="#a371f7"/>
+<text x="770" y="136" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">FORKS</text>
+<text x="750" y="170" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0</text>
+<rect x="34" y="217" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>
+<circle cx="58" cy="243" r="6" fill="#3fb950"/>
+<text x="74" y="248" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">COMMITS · 1Y</text>
+<text x="54" y="282" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">204</text>
+<rect x="382" y="217" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>
+<circle cx="406" cy="243" r="6" fill="#f0883e"/>
+<text x="422" y="248" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">PULL REQUESTS · 1Y</text>
+<text x="402" y="282" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">28</text>
+<rect x="730" y="217" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>
+<circle cx="754" cy="243" r="6" fill="#db61a2"/>
+<text x="770" y="248" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">ISSUES · 1Y</text>
+<text x="750" y="282" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">19</text>
+</svg>
