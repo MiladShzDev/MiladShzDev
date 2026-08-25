@@ -198,38 +198,22 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
 
 ---
 
-## 📊 GitHub Performance
+## 📈 GitHub Performance
 
 <div align="center">
 
-### 🚀 Development Snapshot
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-<img src="https://github-readme-stats.vercel.app/api?username=MiladShzDev&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&show=reviews,prs_merged,discussions_started,discussions_answered&theme=transparent" width="100%" alt="GitHub overview" />
-
-</td>
-<td align="center" width="50%">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MiladShzDev&layout=compact&hide_border=true&langs_count=8&card_width=480&theme=transparent" width="100%" alt="Top languages" />
-
-</td>
-</tr>
-</table>
+<a href="https://github.com/MiladShzDev">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MiladShzDev&theme=github_dark" height="180" alt="GitHub statistics" />
+</a>
+<a href="https://github.com/MiladShzDev">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MiladShzDev&theme=github_dark" height="180" alt="Most used languages" />
+</a>
 
 <br/>
 
-### 🔥 Consistency
-
-<img src="https://streak-stats.demolab.com?user=MiladShzDev&hide_border=true&mode=weekly&theme=transparent" width="88%" alt="GitHub contribution streak" />
-
-<br/><br/>
-
-### 🏆 GitHub Achievements
-
-<img src="https://github-profile-trophy.vercel.app/?username=MiladShzDev&theme=flat&no-frame=true&no-bg=true&margin-w=8&row=1&column=6" width="92%" alt="GitHub profile trophies" />
+<a href="https://github.com/MiladShzDev">
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MiladShzDev&theme=github_dark" width="100%" alt="GitHub profile activity" />
+</a>
 
 </div>
 
