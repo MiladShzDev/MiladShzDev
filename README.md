@@ -78,6 +78,26 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 ---
 
+## 🟩 Contribution Activity
+
+<div align="center">
+
+<p>
+  <strong>My contribution history, visualized as a live GitHub activity animation.</strong>
+</p>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MiladShzDev/MiladShzDev/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/MiladShzDev/MiladShzDev/output/github-snake.svg" />
+  <img src="https://raw.githubusercontent.com/MiladShzDev/MiladShzDev/output/github-snake.svg" alt="GitHub contribution activity animation" />
+</picture>
+
+</div>
+
+> The native GitHub contribution calendar remains the source of truth; this visualization is a visual layer built from the same contribution activity.
+
+---
+
 ## 📊 GitHub Activity
 
 <div align="center">
