@@ -65,99 +65,75 @@ I care about clean boundaries, dependable APIs, realtime communication, develope
 
 <table>
 <tr>
-<td align="center" width="25%">
+<td align="center" valign="top" width="25%">
 
 ### 📱 Mobile
 
-<img src="https://skillicons.dev/icons?i=flutter" height="40" alt="Flutter" /><br/>
-<sub><b>Flutter</b></sub>
+**Flutter**  
+<img src="https://skillicons.dev/icons?i=flutter" height="34" alt="Flutter" />
 
-<br/><br/>
+**Dart**  
+<img src="https://skillicons.dev/icons?i=dart" height="34" alt="Dart" />
 
-<img src="https://skillicons.dev/icons?i=dart" height="40" alt="Dart" /><br/>
-<sub><b>Dart</b></sub>
+**Android**  
+<img src="https://skillicons.dev/icons?i=android" height="34" alt="Android" />
 
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=android" height="40" alt="Android" /><br/>
-<sub><b>Android</b></sub>
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=apple" height="40" alt="iOS" /><br/>
-<sub><b>iOS</b></sub>
+**iOS**  
+<img src="https://skillicons.dev/icons?i=apple" height="34" alt="iOS" />
 
 </td>
 
-<td align="center" width="25%">
+<td align="center" valign="top" width="25%">
 
 ### ⚙️ Backend
 
-<img src="https://skillicons.dev/icons?i=python" height="40" alt="Python" /><br/>
-<sub><b>Python</b></sub>
+**Python**  
+<img src="https://skillicons.dev/icons?i=python" height="34" alt="Python" />
 
-<br/><br/>
+**Django**  
+<img src="https://skillicons.dev/icons?i=django" height="34" alt="Django" />
 
-<img src="https://skillicons.dev/icons?i=django" height="40" alt="Django" /><br/>
-<sub><b>Django</b></sub>
+**FastAPI**  
+<img src="https://skillicons.dev/icons?i=fastapi" height="34" alt="FastAPI" />
 
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=fastapi" height="40" alt="FastAPI" /><br/>
-<sub><b>FastAPI</b></sub>
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=redis" height="40" alt="Redis" /><br/>
-<sub><b>Redis</b></sub>
+**Redis**  
+<img src="https://skillicons.dev/icons?i=redis" height="34" alt="Redis" />
 
 </td>
 
-<td align="center" width="25%">
+<td align="center" valign="top" width="25%">
 
 ### 🌐 Web
 
-<img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="Next.js" /><br/>
-<sub><b>Next.js</b></sub>
+**Next.js**  
+<img src="https://skillicons.dev/icons?i=nextjs" height="34" alt="Next.js" />
 
-<br/><br/>
+**React**  
+<img src="https://skillicons.dev/icons?i=react" height="34" alt="React" />
 
-<img src="https://skillicons.dev/icons?i=react" height="40" alt="React" /><br/>
-<sub><b>React</b></sub>
+**TypeScript**  
+<img src="https://skillicons.dev/icons?i=ts" height="34" alt="TypeScript" />
 
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=ts" height="40" alt="TypeScript" /><br/>
-<sub><b>TypeScript</b></sub>
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=js" height="40" alt="JavaScript" /><br/>
-<sub><b>JavaScript</b></sub>
+**JavaScript**  
+<img src="https://skillicons.dev/icons?i=js" height="34" alt="JavaScript" />
 
 </td>
 
-<td align="center" width="25%">
+<td align="center" valign="top" width="25%">
 
 ### 🏗️ Platform
 
-<img src="https://skillicons.dev/icons?i=postgres" height="40" alt="PostgreSQL" /><br/>
-<sub><b>PostgreSQL</b></sub>
+**PostgreSQL**  
+<img src="https://skillicons.dev/icons?i=postgres" height="34" alt="PostgreSQL" />
 
-<br/><br/>
+**Docker**  
+<img src="https://skillicons.dev/icons?i=docker" height="34" alt="Docker" />
 
-<img src="https://skillicons.dev/icons?i=docker" height="40" alt="Docker" /><br/>
-<sub><b>Docker</b></sub>
+**Linux**  
+<img src="https://skillicons.dev/icons?i=linux" height="34" alt="Linux" />
 
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=linux" height="40" alt="Linux" /><br/>
-<sub><b>Linux</b></sub>
-
-<br/><br/>
-
-<img src="https://skillicons.dev/icons?i=githubactions" height="40" alt="GitHub Actions" /><br/>
-<sub><b>GitHub Actions</b></sub>
+**GitHub Actions**  
+<img src="https://skillicons.dev/icons?i=githubactions" height="34" alt="GitHub Actions" />
 
 </td>
 </tr>
@@ -167,11 +143,12 @@ I care about clean boundaries, dependable APIs, realtime communication, develope
 
 <table>
 <tr>
-<td align="center"><img src="https://skillicons.dev/icons?i=firebase" height="34" alt="Firebase" /><br/><sub><b>Firebase</b></sub></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=sqlite" height="34" alt="SQLite" /><br/><sub><b>SQLite</b></sub></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=git" height="34" alt="Git" /><br/><sub><b>Git</b></sub></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=docker" height="34" alt="Docker" /><br/><sub><b>Docker</b></sub></td>
-<td align="center"><img src="https://skillicons.dev/icons?i=linux" height="34" alt="Linux" /><br/><sub><b>Linux</b></sub></td>
+<td align="center"><b>🔥 Firebase</b></td>
+<td align="center"><b>🗃️ SQLite</b></td>
+<td align="center"><b>🌿 Git</b></td>
+<td align="center"><b>🔌 REST APIs</b></td>
+<td align="center"><b>⚡ WebSockets</b></td>
+<td align="center"><b>🔄 Background Jobs</b></td>
 </tr>
 </table>
 
