@@ -82,7 +82,11 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 <div align="center">
 
-<img src="./assets/contribution-snake.svg" alt="GitHub contribution snake animation" width="100%" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
+  <img src="./assets/github-snake.svg" alt="GitHub contribution snake animation" width="100%" />
+</picture>
 
 </div>
 
