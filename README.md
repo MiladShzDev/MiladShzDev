@@ -202,30 +202,28 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
 
 <div align="center">
 
-### 📊 Contribution & Activity
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" width="100%" alt="Contribution activity graph" />
-
-### 🏆 GitHub Snapshot
-
 <table>
 <tr>
-<td align="center" width="50%">
+<td width="50%" valign="top" align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MiladShzDev&theme=github_dark" width="100%" alt="GitHub statistics" />
+### 📊 My GitHub Statistics
+
+<img src="./assets/github-stats-card.svg" width="100%" alt="My GitHub Statistics" />
 
 </td>
-<td align="center" width="50%">
+<td width="50%" valign="top" align="center">
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MiladShzDev&theme=github_dark" width="100%" alt="Repositories by language" />
+### 🧠 My Programming Languages
+
+<img src="./assets/github-languages-card.svg" width="100%" alt="My Programming Languages with percentage bars" />
 
 </td>
 </tr>
 </table>
 
-### 🧠 Programming Languages
+<br/>
 
-<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MiladShzDev&theme=github_dark" width="100%" alt="Most committed languages" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" width="100%" alt="Contribution activity graph" />
 
 </div>
 
