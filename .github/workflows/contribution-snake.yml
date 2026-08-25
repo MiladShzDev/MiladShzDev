@@ -3,6 +3,8 @@ name: Contribution Snake
 on:
   push:
     branches: [main]
+    paths-ignore:
+      - assets/contribution-snake.svg
   schedule:
     - cron: "17 0 * * *"
   workflow_dispatch:
@@ -17,23 +19,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Generate contribution snake
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: MiladShzDev
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          outputs: |
-            dist/github-snake.svg?palette=github-light
-            dist/github-snake-dark.svg?palette=github-dark
+      - name: Generate from public profile calendar
+        run: python3 scripts/generate_contribution_snake.py
 
-      - name: Publish generated SVGs
+      - name: Publish generated SVG
         run: |
-          mkdir -p assets
-          cp dist/github-snake.svg assets/github-snake.svg
-          cp dist/github-snake-dark.svg assets/github-snake-dark.svg
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-snake.svg assets/github-snake-dark.svg
+          git add assets/contribution-snake.svg
           if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
