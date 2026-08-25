@@ -78,14 +78,14 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 ---
 
-## 🧊 3D Contribution Profile
+## 🐍 Contribution Snake
 
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg" />
-  <img src="./profile-3d-contrib/profile-green-animate.svg" alt="3D GitHub contribution profile" width="100%" />
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
+  <img src="./assets/github-snake.svg" alt="GitHub contribution snake animation" width="100%" />
 </picture>
 
 </div>
