@@ -1,52 +1,85 @@
 <div align="center">
 
-# Milad Dehbozorgi 👋
-
-### Senior Flutter Developer · Django/FastAPI Developer · Next.js Developer
-
-<a href="https://github.com/MiladShzDev">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&pause=900&center=true&vCenter=true&width=700&lines=Building+production-grade+software;Flutter+%2B+Django%2FFastAPI+%2B+Next.js;Mobile+%7C+Web+%7C+Backend+%7C+Realtime+Systems" alt="Typing introduction" />
-</a>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&section=header&text=Milad%20Dehbozorgi&fontSize=48&fontAlignY=36&desc=Senior%20Flutter%20%7C%20Django%2FFastAPI%20%7C%20Next.js%20Developer&descAlignY=56&animation=fadeIn" width="100%" alt="Milad Dehbozorgi header" />
 
 <p>
-  <img src="https://komarev.com/ghpvc/?username=MiladShzDev&style=flat-square" alt="Profile views" />
-  <a href="https://github.com/MiladShzDev?tab=followers"><img src="https://img.shields.io/github/followers/MiladShzDev?style=flat-square&label=Followers" alt="Followers" /></a>
-  <a href="https://github.com/MiladShzDev"><img src="https://img.shields.io/github/stars/MiladShzDev?style=flat-square&label=Stars" alt="Stars" /></a>
+  <a href="https://github.com/MiladShzDev"><img src="https://img.shields.io/badge/GitHub-MiladShzDev-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
+  <a href="https://github.com/MiladShzDev?tab=followers"><img src="https://img.shields.io/github/followers/MiladShzDev?style=for-the-badge&logo=github&label=Followers" alt="Followers" /></a>
+  <img src="https://komarev.com/ghpvc/?username=MiladShzDev&style=for-the-badge&label=Profile+Views" alt="Profile views" />
 </p>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=19&pause=850&center=true&vCenter=true&width=820&lines=Building+production-grade+software;Flutter+%2B+Django%2FFastAPI+%2B+Next.js;Mobile+%7C+Web+%7C+Backend+%7C+Realtime+Systems;Architecture+%7C+APIs+%7C+Automation+%7C+Scalability" alt="Typing introduction" />
 
 </div>
 
 ---
 
-## 👨‍💻 About Me
+## 🧭 Engineering Profile
 
-I build production-grade applications and backend systems across **mobile, web, backend, and automation platforms**.
+<div align="center">
 
-My main focus is turning product ideas into scalable software with strong architecture, clean APIs, realtime communication, and cross-platform experiences.
+<table>
+<tr>
+<td align="center" width="33%">
+
+### 📱 Mobile
+**Flutter / Dart**
+
+Cross-platform applications, reusable UI systems, package development
+
+</td>
+<td align="center" width="33%">
+
+### ⚙️ Backend
+**Django / FastAPI / Python**
+
+REST APIs, realtime services, background jobs, integrations
+
+</td>
+<td align="center" width="33%">
+
+### 🌐 Web
+**Next.js / React / TypeScript**
+
+Modern web applications, dashboards, frontend architecture
+
+</td>
+</tr>
+</table>
+
+</div>
+
+## 🧠 About Me
+
+I build production-grade software across **mobile, web, backend, and automation platforms**.
+
+My engineering focus is on turning product requirements into software that is **maintainable, scalable, observable, and designed for long-term evolution**.
+
+I care about clean boundaries, dependable APIs, realtime communication, developer experience, and systems that remain understandable as they grow.
 
 ---
 
-## ⚡ Core Expertise
+## ⚡ Core Stack
 
-### 📱 Mobile & Cross-Platform
+<div align="center">
 
+### Mobile
 <img src="https://skillicons.dev/icons?i=flutter,dart,android,apple" alt="Mobile stack" />
 
-### ⚙️ Backend Engineering
-
+### Backend
 <img src="https://skillicons.dev/icons?i=python,django,fastapi,postgres,redis" alt="Backend stack" />
 
-### 🌐 Web Engineering
-
+### Web
 <img src="https://skillicons.dev/icons?i=nextjs,react,ts,js" alt="Web stack" />
 
-### 🏗️ Infrastructure & Engineering
-
+### Infrastructure
 <img src="https://skillicons.dev/icons?i=docker,linux,git,githubactions" alt="Infrastructure stack" />
 
-**Architecture:** `Clean Architecture` · `Distributed Systems` · `Microservices` · `Realtime Systems` · `Event-Driven Architecture`
+</div>
 
-**Automation:** `API Integration` · `Workflow Automation` · `Background Jobs` · `System Integration`
+**Architecture** · `Clean Architecture` · `Distributed Systems` · `Microservices` · `Realtime Systems` · `Event-Driven Architecture`
+
+**Engineering** · `API Design` · `Workflow Automation` · `Background Jobs` · `System Integration` · `Cross-Platform Development`
 
 ---
 
@@ -55,26 +88,29 @@ My main focus is turning product ideas into scalable software with strong archit
 <div align="center">
 
 <a href="https://github.com/MiladShzDev/awesome_gauges">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=MiladShzDev&repo=awesome_gauges&hide_border=true" alt="Awesome Gauges" />
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=MiladShzDev&repo=awesome_gauges&hide_border=true&theme=transparent" alt="Awesome Gauges repository" />
 </a>
 
 </div>
 
-**Awesome Gauges** is a Flutter package for building customizable curve, horizontal, and vertical gauge components.
+### `awesome_gauges`
+A Flutter package for customizable **curve, horizontal, and vertical gauge components**.
 
-`Flutter` `Dart` `Reusable UI Components` `Package Development`
+`Flutter` · `Dart` · `Reusable UI Components` · `Package Development`
 
 ---
 
-## 🎯 Current Direction
+## 🎯 Current Technology Focus
 
 <div align="center">
+
+<img src="https://skillicons.dev/icons?i=flutter,dart,python,django,fastapi,nextjs,react,ts,postgres,redis,docker" alt="Current technology focus" />
+
+<br/><br/>
 
 `Flutter` × `Python` × `Django` × `FastAPI` × `Next.js` × `TypeScript` × `PostgreSQL` × `Redis`
 
 </div>
-
-I'm focused on building software that is **maintainable, scalable, observable, and designed for long-term evolution**.
 
 ---
 
@@ -92,45 +128,50 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 ---
 
-## 📊 GitHub Activity
+## 📈 GitHub Performance
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=MiladShzDev&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true" height="165" alt="GitHub stats" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MiladShzDev&layout=compact&hide_border=true&langs_count=8" height="165" alt="Top languages" />
+<img src="https://github-readme-stats.vercel.app/api?username=MiladShzDev&show_icons=true&hide_border=true&rank_icon=github&include_all_commits=true&theme=transparent" height="175" alt="GitHub statistics" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MiladShzDev&layout=compact&hide_border=true&langs_count=8&theme=transparent" height="175" alt="Top languages" />
 
-</div>
+<br/>
 
-<div align="center">
-
-<img src="https://streak-stats.demolab.com?user=MiladShzDev&hide_border=true" alt="GitHub streak" />
-
-</div>
-
----
-
-## 🧰 Tech Stack
-
-<div align="center">
-
-<img src="https://skillicons.dev/icons?i=flutter,dart,python,django,fastapi,nextjs,react,ts,js,postgres,redis,docker,linux,git,githubactions" alt="Technology stack" />
+<img src="https://streak-stats.demolab.com?user=MiladShzDev&hide_border=true&theme=transparent" alt="GitHub streak" />
 
 </div>
 
 ---
 
-## 🤝 Connect
+## 🛠️ Engineering Principles
 
 <div align="center">
 
-<a href="https://github.com/MiladShzDev"><img src="https://img.shields.io/badge/GitHub-MiladShzDev-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
+| Principle | What it means |
+|:--|:--|
+| **Architecture first** | Clear boundaries and explicit responsibilities |
+| **API first** | Stable contracts between systems and clients |
+| **Scalability** | Design for growth without unnecessary complexity |
+| **Observability** | Systems should be diagnosable in production |
+| **Automation** | Repetitive work should become reliable workflows |
+| **Maintainability** | Code should remain understandable months later |
 
 </div>
 
 ---
 
+## 🤝 Let's Connect
+
 <div align="center">
 
-> Building software is not only about writing code — it's about designing systems that can evolve.
+<a href="https://github.com/MiladShzDev"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
+
+</div>
+
+<br/>
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer" width="100%" alt="Footer" />
 
 </div>
