@@ -78,13 +78,15 @@ I'm focused on building software that is **maintainable, scalable, observable, a
 
 ---
 
-## 🟩 Contribution Activity
+## 🧊 3D Contribution Profile
 
 <div align="center">
 
-<a href="https://github.com/MiladShzDev">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" alt="GitHub contribution activity graph" />
-</a>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-green.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-green-animate.svg" />
+  <img src="./profile-3d-contrib/profile-green-animate.svg" alt="3D GitHub contribution profile" width="100%" />
+</picture>
 
 </div>
 
