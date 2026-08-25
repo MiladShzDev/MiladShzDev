@@ -1,1 +1,0 @@
-Contribution visualization asset is published by `.github/workflows/contribution-snake.yml`.
