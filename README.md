@@ -63,23 +63,129 @@ I care about clean boundaries, dependable APIs, realtime communication, develope
 
 <div align="center">
 
-### Mobile
-<img src="https://skillicons.dev/icons?i=flutter,dart,android,apple" alt="Mobile stack" />
+<table>
+<tr>
+<td align="center" width="25%">
 
-### Backend
-<img src="https://skillicons.dev/icons?i=python,django,fastapi,postgres,redis" alt="Backend stack" />
+### 📱 Mobile
 
-### Web
-<img src="https://skillicons.dev/icons?i=nextjs,react,ts,js" alt="Web stack" />
+<img src="https://skillicons.dev/icons?i=flutter" height="40" alt="Flutter" /><br/>
+<sub><b>Flutter</b></sub>
 
-### Infrastructure
-<img src="https://skillicons.dev/icons?i=docker,linux,git,githubactions" alt="Infrastructure stack" />
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=dart" height="40" alt="Dart" /><br/>
+<sub><b>Dart</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=android" height="40" alt="Android" /><br/>
+<sub><b>Android</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=apple" height="40" alt="iOS" /><br/>
+<sub><b>iOS</b></sub>
+
+</td>
+
+<td align="center" width="25%">
+
+### ⚙️ Backend
+
+<img src="https://skillicons.dev/icons?i=python" height="40" alt="Python" /><br/>
+<sub><b>Python</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=django" height="40" alt="Django" /><br/>
+<sub><b>Django</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=fastapi" height="40" alt="FastAPI" /><br/>
+<sub><b>FastAPI</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=redis" height="40" alt="Redis" /><br/>
+<sub><b>Redis</b></sub>
+
+</td>
+
+<td align="center" width="25%">
+
+### 🌐 Web
+
+<img src="https://skillicons.dev/icons?i=nextjs" height="40" alt="Next.js" /><br/>
+<sub><b>Next.js</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=react" height="40" alt="React" /><br/>
+<sub><b>React</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=ts" height="40" alt="TypeScript" /><br/>
+<sub><b>TypeScript</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=js" height="40" alt="JavaScript" /><br/>
+<sub><b>JavaScript</b></sub>
+
+</td>
+
+<td align="center" width="25%">
+
+### 🏗️ Platform
+
+<img src="https://skillicons.dev/icons?i=postgres" height="40" alt="PostgreSQL" /><br/>
+<sub><b>PostgreSQL</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=docker" height="40" alt="Docker" /><br/>
+<sub><b>Docker</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=linux" height="40" alt="Linux" /><br/>
+<sub><b>Linux</b></sub>
+
+<br/><br/>
+
+<img src="https://skillicons.dev/icons?i=githubactions" height="40" alt="GitHub Actions" /><br/>
+<sub><b>GitHub Actions</b></sub>
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<table>
+<tr>
+<td align="center"><img src="https://skillicons.dev/icons?i=firebase" height="34" alt="Firebase" /><br/><sub><b>Firebase</b></sub></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=sqlite" height="34" alt="SQLite" /><br/><sub><b>SQLite</b></sub></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=git" height="34" alt="Git" /><br/><sub><b>Git</b></sub></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=docker" height="34" alt="Docker" /><br/><sub><b>Docker</b></sub></td>
+<td align="center"><img src="https://skillicons.dev/icons?i=linux" height="34" alt="Linux" /><br/><sub><b>Linux</b></sub></td>
+</tr>
+</table>
 
 </div>
 
-**Architecture** · `Clean Architecture` · `Distributed Systems` · `Microservices` · `Realtime Systems` · `Event-Driven Architecture`
+### 🏛️ Architecture & Engineering
 
-**Engineering** · `API Design` · `Workflow Automation` · `Background Jobs` · `System Integration` · `Cross-Platform Development`
+<div align="center">
+
+`Clean Architecture` · `Distributed Systems` · `Microservices` · `Realtime Systems` · `Event-Driven Architecture`
+
+`REST APIs` · `WebSockets` · `Background Jobs` · `Workflow Automation` · `API Integration`
+
+</div>
 
 ---
 
