@@ -198,22 +198,34 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
 
 ---
 
-## 📈 GitHub Performance
+## ⚙️ GitHub Analytics
 
 <div align="center">
 
-<a href="https://github.com/MiladShzDev">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MiladShzDev&theme=github_dark" height="180" alt="GitHub statistics" />
-</a>
-<a href="https://github.com/MiladShzDev">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MiladShzDev&theme=github_dark" height="180" alt="Most used languages" />
-</a>
+### 📊 Contribution & Activity
 
-<br/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" width="100%" alt="Contribution activity graph" />
 
-<a href="https://github.com/MiladShzDev">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=MiladShzDev&theme=github_dark" width="100%" alt="GitHub profile activity" />
-</a>
+### 🏆 GitHub Snapshot
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=MiladShzDev&theme=github_dark" width="100%" alt="GitHub statistics" />
+
+</td>
+<td align="center" width="50%">
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=MiladShzDev&theme=github_dark" width="100%" alt="Repositories by language" />
+
+</td>
+</tr>
+</table>
+
+### 🧠 Programming Languages
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=MiladShzDev&theme=github_dark" width="100%" alt="Most committed languages" />
 
 </div>
 
