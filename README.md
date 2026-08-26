@@ -17,11 +17,17 @@
 ## 🧭 Engineering Profile
 
 <div align="center">
-<p>
-  <img src="./assets/engineering-profile-mobile.svg" width="32%" alt="Mobile engineering profile" />
-  <img src="./assets/engineering-profile-backend.svg" width="32%" alt="Backend engineering profile" />
-  <img src="./assets/engineering-profile-web.svg" width="32%" alt="Web engineering profile" />
-</p>
+
+<img src="./assets/engineering-profile-mobile.svg" width="100%" alt="Mobile engineering profile" />
+
+<br/><br/>
+
+<img src="./assets/engineering-profile-backend.svg" width="100%" alt="Backend engineering profile" />
+
+<br/><br/>
+
+<img src="./assets/engineering-profile-web.svg" width="100%" alt="Web engineering profile" />
+
 </div>
 
 ## 🧠 About Me
