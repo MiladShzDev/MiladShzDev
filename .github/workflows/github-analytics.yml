@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - assets/github-stats-card.svg
       - assets/github-languages-card.svg
+      - assets/github-activity-graph.svg
   schedule:
     - cron: "37 1 * * *"
   workflow_dispatch:
@@ -79,6 +80,15 @@ jobs:
                 totalPullRequestContributions
                 totalIssueContributions
                 totalRepositoryContributions
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      contributionCount
+                      date
+                    }
+                  }
+                }
               }
             }
           }
@@ -89,6 +99,7 @@ jobs:
               "totalPullRequestContributions": 0,
               "totalIssueContributions": 0,
               "totalRepositoryContributions": 0,
+              "contributionCalendar": {"totalContributions": 0, "weeks": []},
           }
           try:
               response = requests.post(
@@ -131,7 +142,6 @@ jobs:
                   f'<text x="42" y="66" fill="{cyan}" font-size="34" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">My GitHub Statistics</text>',
                   f'<text x="42" y="96" fill="{muted}" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif">Profile activity · rolling 365-day window</text>',
               ]
-
               stats = [
                   ("Repositories", len(repos), "#58a6ff"),
                   ("Stars", total_stars, "#f2cc60"),
@@ -140,7 +150,6 @@ jobs:
                   ("Pull Requests · 1Y", contributions["totalPullRequestContributions"], "#f0883e"),
                   ("Issues · 1Y", contributions["totalIssueContributions"], "#db61a2"),
               ]
-
               for i, (label, value, accent) in enumerate(stats):
                   row, col = divmod(i, 3)
                   x = 38 + col * 242
@@ -151,7 +160,6 @@ jobs:
                       f'<text x="{x+38}" y="{y+34}" fill="{muted}" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(label)}</text>',
                       f'<text x="{x+18}" y="{y+72}" fill="{white}" font-size="36" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{value:,}</text>',
                   ]
-
               activity = (
                   contributions["totalCommitContributions"]
                   + contributions["totalPullRequestContributions"]
@@ -182,7 +190,6 @@ jobs:
                   f'<text x="42" y="66" fill="{cyan}" font-size="34" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">My Programming Languages</text>',
                   f'<text x="42" y="96" fill="{muted}" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif">Repository language distribution by source-code bytes</text>',
               ]
-
               bar_x, bar_y, bar_w, bar_h = 42, 122, 876, 26
               cursor = bar_x
               for i, (_, pct) in enumerate(languages):
@@ -190,12 +197,9 @@ jobs:
                   if i == len(languages) - 1:
                       segment = bar_x + bar_w - cursor
                   if segment > 0:
-                      out.append(
-                          f'<rect x="{cursor:.2f}" y="{bar_y}" width="{max(1, segment):.2f}" height="{bar_h}" fill="{palette[i % len(palette)]}"/>'
-                      )
+                      out.append(f'<rect x="{cursor:.2f}" y="{bar_y}" width="{max(1, segment):.2f}" height="{bar_h}" fill="{palette[i % len(palette)]}"/>')
                   cursor += segment
               out.append(f'<rect x="{bar_x}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="13" fill="none" stroke="#36527f" stroke-width="2"/>')
-
               for i, (name, pct) in enumerate(languages):
                   col = i % 2
                   row = i // 2
@@ -209,29 +213,94 @@ jobs:
                       f'<rect x="{x+25}" y="{y+29}" width="375" height="11" rx="5.5" fill="#1a2c4e"/>',
                       f'<rect x="{x+25}" y="{y+29}" width="{max(6, 375*pct/100):.2f}" height="11" rx="5.5" fill="{color}"/>',
                   ]
-
               if languages:
                   top_name, top_pct = languages[0]
-                  out.append(
-                      f'<text x="42" y="{H-32}" fill="{muted}" font-size="16" font-family="Inter,Segoe UI,Arial,sans-serif">Top language: <tspan fill="{white}" font-weight="800">{esc(top_name)} · {top_pct:.2f}%</tspan></text>'
-                  )
-
+                  out.append(f'<text x="42" y="{H-32}" fill="{muted}" font-size="16" font-family="Inter,Segoe UI,Arial,sans-serif">Top language: <tspan fill="{white}" font-weight="800">{esc(top_name)} · {top_pct:.2f}%</tspan></text>')
               out.append('</svg>')
+              return "\n".join(out)
+
+          def activity_svg() -> str:
+              W, H = 1100, 360
+              bg, panel = "#071126", "#0b1530"
+              muted, white, cyan, green = "#a8b6cf", "#f6f9ff", "#18b9ff", "#19e6a2"
+              calendar = contributions.get("contributionCalendar", {}) or {}
+              days = []
+              for week in calendar.get("weeks", []) or []:
+                  for day in week.get("contributionDays", []) or []:
+                      days.append(day)
+              days = sorted(days, key=lambda item: item.get("date", ""))
+              counts = [int(day.get("contributionCount", 0)) for day in days]
+              max_count = max(counts) if counts else 1
+
+              weekly = []
+              for i in range(0, len(days), 7):
+                  chunk = days[i:i+7]
+                  weekly.append(sum(int(day.get("contributionCount", 0)) for day in chunk))
+              weekly = weekly[-53:]
+              max_week = max(weekly) if weekly else 1
+
+              out = [
+                  f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+                  f'<rect x="2" y="2" width="{W-4}" height="{H-4}" rx="30" fill="{bg}" stroke="#53678f" stroke-width="2"/>',
+                  f'<rect x="18" y="18" width="{W-36}" height="{H-36}" rx="24" fill="{panel}" stroke="#223b69" stroke-width="2"/>',
+                  f'<text x="42" y="62" fill="{cyan}" font-size="30" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">Contribution Activity</text>',
+                  f'<text x="42" y="91" fill="{muted}" font-size="16" font-family="Inter,Segoe UI,Arial,sans-serif">Daily contributions · rolling 365-day window</text>',
+              ]
+
+              chart_x, chart_y, chart_w, chart_h = 54, 128, 990, 160
+              points = []
+              if weekly:
+                  step = chart_w / max(1, len(weekly) - 1)
+                  for idx, value in enumerate(weekly):
+                      x = chart_x + idx * step
+                      y = chart_y + chart_h - (value / max_week) * chart_h
+                      points.append((x, y, value))
+
+              if points:
+                  line = " ".join(f"{x:.1f},{y:.1f}" for x, y, _ in points)
+                  area = f"{chart_x:.1f},{chart_y+chart_h:.1f} " + line + f" {points[-1][0]:.1f},{chart_y+chart_h:.1f}"
+                  out += [
+                      f'<polyline points="{area}" fill="none" stroke="{cyan}" stroke-width="1" opacity="0.18"/>',
+                      f'<polygon points="{area}" fill="{cyan}" opacity="0.10"/>',
+                      f'<polyline points="{line}" fill="none" stroke="{cyan}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>',
+                  ]
+                  for idx, (x, y, value) in enumerate(points):
+                      if value > 0:
+                          out.append(f'<circle cx="{x:.1f}" cy="{y:.1f}" r="3.2" fill="{green}" stroke="{panel}" stroke-width="2"/>')
+
+              for level in range(4):
+                  y = chart_y + level * (chart_h / 3)
+                  out.append(f'<line x1="{chart_x}" y1="{y:.1f}" x2="{chart_x+chart_w}" y2="{y:.1f}" stroke="#1f3156" stroke-width="1"/>')
+
+              total = int(calendar.get("totalContributions", 0) or 0)
+              average = total / max(1, len(days))
+              peak = max(counts) if counts else 0
+              out += [
+                  f'<text x="54" y="324" fill="{muted}" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif">Total contributions</text>',
+                  f'<text x="54" y="346" fill="{white}" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{total:,}</text>',
+                  f'<text x="290" y="324" fill="{muted}" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif">Daily average</text>',
+                  f'<text x="290" y="346" fill="{white}" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{average:.1f}</text>',
+                  f'<text x="506" y="324" fill="{muted}" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif">Peak day</text>',
+                  f'<text x="506" y="346" fill="{white}" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{peak:,}</text>',
+                  f'<text x="1046" y="346" text-anchor="end" fill="{muted}" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">GitHub Contribution Calendar</text>',
+                  '</svg>',
+              ]
               return "\n".join(out)
 
           Path("assets").mkdir(exist_ok=True)
           Path("assets/github-stats-card.svg").write_text(stats_svg(), encoding="utf-8")
           Path("assets/github-languages-card.svg").write_text(languages_svg(), encoding="utf-8")
+          Path("assets/github-activity-graph.svg").write_text(activity_svg(), encoding="utf-8")
           PY
 
       - name: Commit analytics assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/github-stats-card.svg assets/github-languages-card.svg
+          git add assets/github-stats-card.svg assets/github-languages-card.svg assets/github-activity-graph.svg
           if git diff --cached --quiet; then
             echo "No analytics changes."
             exit 0
           fi
-          git commit -m "chore: refresh GitHub analytics cards"
+          git commit -m "feat: add self-hosted contribution activity graph"
           git push
