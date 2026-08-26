@@ -38,83 +38,39 @@ I care about clean boundaries, dependable APIs, realtime communication, develope
 
 ### Languages
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" alt="Dart" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
-</p>
+<div align="center"><img src="./assets/skills-languages.svg" width="100%" alt="Programming languages skill cards" /></div>
 
 ### Mobile Development
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white" alt="iOS" />
-</p>
+<div align="center"><img src="./assets/skills-mobile.svg" width="100%" alt="Mobile development skill cards" /></div>
 
 ### Backend
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white" alt="Django" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Django%20REST%20Framework-A30000?style=for-the-badge&logo=django&logoColor=white" alt="Django REST Framework" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Celery-37814A?style=for-the-badge&logo=celery&logoColor=white" alt="Celery" />
-</p>
+<div align="center"><img src="./assets/skills-backend.svg" width="100%" alt="Backend skill cards" /></div>
 
 ### Frontend
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" alt="Next.js" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
-</p>
+<div align="center"><img src="./assets/skills-frontend.svg" width="100%" alt="Frontend skill cards" /></div>
 
 ### Databases & Data
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Redis-DC3822?style=for-the-badge&logo=redis&logoColor=white" alt="Redis" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black" alt="Firebase" />
-</p>
+<div align="center"><img src="./assets/skills-databases.svg" width="100%" alt="Database skill cards" /></div>
 
 ### Realtime, APIs & Integration
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/REST%20API-005571?style=for-the-badge&logo=openapiinitiative&logoColor=white" alt="REST API" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/WebSockets-111111?style=for-the-badge&logo=socketdotio&logoColor=white" alt="WebSockets" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/OpenAPI-6BA539?style=for-the-badge&logo=openapiinitiative&logoColor=white" alt="OpenAPI" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman" />
-</p>
+<div align="center"><img src="./assets/skills-api.svg" width="100%" alt="API and realtime skill cards" /></div>
 
 ### DevOps & Infrastructure
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions" />
-</p>
+<div align="center"><img src="./assets/skills-devops.svg" width="100%" alt="DevOps skill cards" /></div>
 
 ### Testing & Quality
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/Pytest-0A9EDC?style=for-the-badge&logo=pytest&logoColor=white" alt="Pytest" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Flutter%20Test-02569B?style=for-the-badge&logo=flutter&logoColor=white" alt="Flutter Test" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/API%20Testing-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="API Testing" />
-</p>
+<div align="center"><img src="./assets/skills-testing.svg" width="100%" alt="Testing skill cards" /></div>
 
 ### Development Tools
 
-<p>
-  <img height="48" src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="Visual Studio Code" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Android%20Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white" alt="Android Studio" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Xcode-147EFB?style=for-the-badge&logo=xcode&logoColor=white" alt="Xcode" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/PyCharm-FF7A59?style=for-the-badge&logo=pycharm&logoColor=white" alt="PyCharm" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/WebStorm-00AEEF?style=for-the-badge&logo=webstorm&logoColor=white" alt="WebStorm" />&nbsp;&nbsp;&nbsp;
-  <img height="48" src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="Figma" />
-</p>
+<div align="center"><img src="./assets/skills-tools.svg" width="100%" alt="Development tools skill cards" /></div>
 
 ### Architecture & Engineering
 
