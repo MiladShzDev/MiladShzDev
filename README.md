@@ -207,7 +207,11 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
 
 <div align="center">
 
-<a href="https://github.com/MiladShzDev"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
+<img src="https://capsule-render.vercel.app/api?type=waving&height=140&section=footer&text=Let's%20Connect&fontSize=32&fontAlignY=52&animation=fadeIn&color=0:0077b6,50:00b4d8,100:48cae4&fontColor=f6f9ff" width="100%" alt="Let's Connect" />
+
+<br/>
+
+<a href="https://github.com/MiladShzDev"><img src="https://img.shields.io/badge/GitHub-MiladShzDev-0077b6?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
 
 </div>
 
@@ -215,6 +219,6 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=120&section=footer" width="100%" alt="Footer" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=80&section=footer&color=0:0077b6,50:00b4d8,100:48cae4" width="100%" alt="Footer" />
 
 </div>
