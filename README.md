@@ -17,36 +17,11 @@
 ## 🧭 Engineering Profile
 
 <div align="center">
-
-<table>
-<tr>
-<td align="center" width="33%">
-
-### 📱 Mobile
-**Flutter / Dart**
-
-Cross-platform applications, reusable UI systems, package development
-
-</td>
-<td align="center" width="33%">
-
-### ⚙️ Backend
-**Django / FastAPI / Python**
-
-REST APIs, realtime services, background jobs, integrations
-
-</td>
-<td align="center" width="33%">
-
-### 🌐 Web
-**Next.js / React / TypeScript**
-
-Modern web applications, dashboards, frontend architecture
-
-</td>
-</tr>
-</table>
-
+<p>
+  <img src="./assets/engineering-profile-mobile.svg" width="32%" alt="Mobile engineering profile" />
+  <img src="./assets/engineering-profile-backend.svg" width="32%" alt="Backend engineering profile" />
+  <img src="./assets/engineering-profile-web.svg" width="32%" alt="Web engineering profile" />
+</p>
 </div>
 
 ## 🧠 About Me
