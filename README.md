@@ -216,9 +216,3 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
 </div>
 
 <br/>
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&height=80&section=footer&color=0:0077b6,50:00b4d8,100:48cae4" width="100%" alt="Footer" />
-
-</div>
