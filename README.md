@@ -206,7 +206,7 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
   <img src="./assets/github-languages-card.svg" width="49%" alt="My Programming Languages" />
 </p>
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" width="100%" alt="Contribution activity graph" />
+<img src="./assets/github-activity-graph.svg" width="100%" alt="Contribution activity graph" />
 </div>
 
 ---
