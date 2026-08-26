@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&height=220&section=header&text=Milad%20Dehbozorgi&fontSize=48&fontAlignY=36&desc=Senior%20Flutter%20%7C%20Django%2FFastAPI%20%7C%20Next.js%20Developer&descAlignY=56&animation=fadeIn" width="100%" alt="Milad Dehbozorgi header" />
+<img src="https://capsule-render.vercel.app/api?type=waving&height=220&section=header&text=Milad%20Dehbozorgi&fontSize=48&fontAlignY=36&desc=Senior%20Flutter%20%7C%20Django%2FFastAPI%20%7C%20Next.js%20Developer&descAlignY=56&animation=fadeIn&color=0b1530&fontColor=f6f9ff" width="100%" alt="Milad Dehbozorgi header" />
 
 <p>
   <a href="https://github.com/MiladShzDev"><img src="https://img.shields.io/badge/GitHub-MiladShzDev-181717?style=for-the-badge&logo=github" alt="GitHub" /></a>
