@@ -28,46 +28,49 @@ jobs:
           from __future__ import annotations
           import datetime as dt
           import html
-          import math
           import os
           from pathlib import Path
-
           import requests
 
           USER = "MiladShzDev"
           TOKEN = os.environ.get("GH_PROFILE_TOKEN") or os.environ.get("GITHUB_TOKEN")
-          H = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
+          HEADERS = {
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+          }
           if TOKEN:
-              H["Authorization"] = f"Bearer {TOKEN}"
+              HEADERS["Authorization"] = f"Bearer {TOKEN}"
 
           def get(url, **kwargs):
-              r = requests.get(url, headers=H, timeout=20, **kwargs)
-              r.raise_for_status()
-              return r.json()
+              response = requests.get(url, headers=HEADERS, timeout=20, **kwargs)
+              response.raise_for_status()
+              return response.json()
 
-          repos = get(f"https://api.github.com/users/{USER}/repos", params={"per_page": 100, "type": "owner", "sort": "updated"})
-          repos = [r for r in repos if not r.get("fork") and not r.get("archived")]
+          repos = get(
+              f"https://api.github.com/users/{USER}/repos",
+              params={"per_page": 100, "type": "owner", "sort": "updated"},
+          )
+          repos = [repo for repo in repos if not repo.get("fork") and not repo.get("archived")]
 
-          total_stars = sum(r.get("stargazers_count", 0) for r in repos)
-          total_forks = sum(r.get("forks_count", 0) for r in repos)
-          followers = get(f"https://api.github.com/users/{USER}").get("followers", 0)
+          total_stars = sum(repo.get("stargazers_count", 0) for repo in repos)
+          total_forks = sum(repo.get("forks_count", 0) for repo in repos)
 
           language_bytes = {}
           for repo in repos:
               try:
-                  data = get(f"https://api.github.com/repos/{USER}/{repo['name']}/languages")
+                  repo_languages = get(f"https://api.github.com/repos/{USER}/{repo['name']}/languages")
               except Exception:
                   continue
-              for lang, amount in data.items():
-                  language_bytes[lang] = language_bytes.get(lang, 0) + amount
+              for language, amount in repo_languages.items():
+                  language_bytes[language] = language_bytes.get(language, 0) + amount
 
-          ranked = sorted(language_bytes.items(), key=lambda x: x[1], reverse=True)[:8]
-          total_bytes = sum(v for _, v in ranked) or 1
+          ranked = sorted(language_bytes.items(), key=lambda item: item[1], reverse=True)[:8]
+          total_bytes = sum(value for _, value in ranked) or 1
           languages = [(name, value / total_bytes * 100) for name, value in ranked]
 
           now = dt.datetime.now(dt.timezone.utc)
           year_start = now - dt.timedelta(days=365)
-          query = '''
+          query = """
           query($login:String!, $from:DateTime!, $to:DateTime!) {
             user(login:$login) {
               contributionsCollection(from:$from, to:$to) {
@@ -78,18 +81,40 @@ jobs:
               }
             }
           }
-          '''
-          contributions = {"totalCommitContributions": 0, "totalPullRequestContributions": 0, "totalIssueContributions": 0, "totalRepositoryContributions": 0}
+          """
+
+          contributions = {
+              "totalCommitContributions": 0,
+              "totalPullRequestContributions": 0,
+              "totalIssueContributions": 0,
+              "totalRepositoryContributions": 0,
+          }
           try:
-              r = requests.post("https://api.github.com/graphql", headers=H, json={"query": query, "variables": {"login": USER, "from": year_start.isoformat(), "to": now.isoformat()}}, timeout=20)
-              if r.ok:
-                  contributions.update((r.json().get("data", {}).get("user", {}) or {}).get("contributionsCollection", {}) or {})
+              response = requests.post(
+                  "https://api.github.com/graphql",
+                  headers=HEADERS,
+                  json={
+                      "query": query,
+                      "variables": {
+                          "login": USER,
+                          "from": year_start.isoformat(),
+                          "to": now.isoformat(),
+                      },
+                  },
+                  timeout=20,
+              )
+              if response.ok:
+                  contribution_data = (
+                      response.json().get("data", {}).get("user", {}) or {}
+                  ).get("contributionsCollection", {}) or {}
+                  contributions.update(contribution_data)
           except Exception:
               pass
 
-          def esc(s: str) -> str:
-              return html.escape(str(s), quote=True)
+          def esc(value: object) -> str:
+              return html.escape(str(value), quote=True)
 
+          # ---------- My GitHub Statistics ----------
           stat_items = [
               ("REPOSITORIES", len(repos), "#58a6ff"),
               ("STARS", total_stars, "#f2cc60"),
@@ -99,46 +124,75 @@ jobs:
               ("ISSUES · 1Y", contributions["totalIssueContributions"], "#db61a2"),
           ]
 
-          def stat_svg():
-              W,HGT = 1100, 360
-              out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{HGT}" viewBox="0 0 {W} {HGT}">',
-                     '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
-                     '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My GitHub Statistics</text>',
-                     '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Live profile metrics • rolling 365-day contribution window</text>']
-              for i,(label,val,accent) in enumerate(stat_items):
-                  row, col = divmod(i, 3)
-                  x = 34 + col*348
-                  y = 105 + row*112
-                  out += [f'<rect x="{x}" y="{y}" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>',
-                          f'<circle cx="{x+24}" cy="{y+26}" r="6" fill="{accent}"/>',
-                          f'<text x="{x+40}" y="{y+31}" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(label)}</text>',
-                          f'<text x="{x+20}" y="{y+65}" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{val:,}</text>']
-              out.append('</svg>')
-              return '\n'.join(out)
+          def stats_svg() -> str:
+              width, height = 1100, 360
+              out = [
+                  f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+                  '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
+                  '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My GitHub Statistics</text>',
+                  '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Live profile metrics · rolling 365-day contribution window</text>',
+              ]
 
-          palette = ["#58a6ff", "#3fb950", "#f2cc60", "#a371f7", "#f0883e", "#db61a2", "#79c0ff", "#56d364"]
+              for index, (label, value, accent) in enumerate(stat_items):
+                  row, col = divmod(index, 3)
+                  x = 34 + col * 348
+                  y = 105 + row * 112
+                  out.extend([
+                      f'<rect x="{x}" y="{y}" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>',
+                      f'<circle cx="{x + 24}" cy="{y + 26}" r="6" fill="{accent}"/>',
+                      f'<text x="{x + 40}" y="{y + 31}" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(label)}</text>',
+                      f'<text x="{x + 20}" y="{y + 65}" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{value:,}</text>',
+                  ])
 
-          def lang_svg():
-              W,HGT = 1100, max(320, 118 + len(languages)*46)
-              out = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{HGT}" viewBox="0 0 {W} {HGT}">',
-                     '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
-                     '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My Programming Languages</text>',
-                     '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Share of tracked source-code bytes across owned, non-fork repositories</text>']
-              bar_x, bar_w = 280, 700
-              for i,(name,pct) in enumerate(languages):
-                  y = 112 + i*46
-                  color = palette[i % len(palette)]
-                  pct_txt = f"{pct:.2f}%"
-                  out += [f'<text x="42" y="{y+15}" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">{esc(name)}</text>',
-                          f'<rect x="{bar_x}" y="{y}" width="{bar_w}" height="18" rx="9" fill="#21262d"/>',
-                          f'<rect x="{bar_x}" y="{y}" width="{max(4, bar_w*pct/100):.1f}" height="18" rx="9" fill="{color}"/>',
-                          f'<text x="1010" y="{y+15}" text-anchor="end" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(pct_txt)}</text>']
-              out += ['</svg>']
-              return '\n'.join(out)
+              out.append("</svg>")
+              return "\n".join(out)
+
+          # ---------- My Programming Languages ----------
+          palette = [
+              "#58a6ff", "#3fb950", "#f2cc60", "#a371f7",
+              "#f0883e", "#db61a2", "#79c0ff", "#56d364",
+          ]
+
+          def languages_svg() -> str:
+              width, height = 1100, 118 + max(1, len(languages)) * 46
+              out = [
+                  f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
+                  '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
+                  '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My Programming Languages</text>',
+                  '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Share of tracked source-code bytes across owned, non-fork repositories</text>',
+              ]
+
+              bar_x, bar_width = 280, 700
+              stacked_x = bar_x
+              # Top stacked bar matching the visual template.
+              for index, (_, percent) in enumerate(languages):
+                  segment_width = max(3, bar_width * percent / 100)
+                  color = palette[index % len(palette)]
+                  out.append(
+                      f'<rect x="{stacked_x:.1f}" y="112" width="{segment_width:.1f}" height="18" fill="{color}"/>'
+                  )
+                  stacked_x += segment_width
+              out.extend([
+                  '<rect x="980" y="112" width="0" height="18" fill="none"/>',
+              ])
+
+              for index, (name, percent) in enumerate(languages):
+                  y = 158 + index * 46
+                  color = palette[index % len(palette)]
+                  out.extend([
+                      f'<circle cx="50" cy="{y + 6}" r="7" fill="{color}"/>',
+                      f'<text x="68" y="{y + 11}" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">{esc(name)}</text>',
+                      f'<text x="300" y="{y + 11}" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">{percent:.2f}%</text>',
+                      f'<rect x="340" y="{y - 3}" width="640" height="18" rx="9" fill="#21262d"/>',
+                      f'<rect x="340" y="{y - 3}" width="{max(4, 640 * percent / 100):.1f}" height="18" rx="9" fill="{color}"/>',
+                  ])
+
+              out.append("</svg>")
+              return "\n".join(out)
 
           Path("assets").mkdir(exist_ok=True)
-          Path("assets/github-stats-card.svg").write_text(stat_svg(), encoding="utf-8")
-          Path("assets/github-languages-card.svg").write_text(lang_svg(), encoding="utf-8")
+          Path("assets/github-stats-card.svg").write_text(stats_svg(), encoding="utf-8")
+          Path("assets/github-languages-card.svg").write_text(languages_svg(), encoding="utf-8")
           PY
 
       - name: Commit analytics assets
