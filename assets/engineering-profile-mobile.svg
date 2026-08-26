@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
+<rect x="2" y="2" width="956" height="356" rx="30" fill="#071126" stroke="#53678f" stroke-width="2"/>
+<rect x="18" y="18" width="924" height="324" rx="24" fill="#0b1530" stroke="#223b69" stroke-width="2"/>
+<text x="42" y="66" fill="#18b9ff" font-size="34" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">📱 Mobile</text>
+<text x="42" y="120" fill="#f6f9ff" font-size="26" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">Flutter / Dart</text>
+<rect x="42" y="146" width="90" height="4" rx="2" fill="#18b9ff"/>
+<text x="42" y="194" fill="#a8b6cf" font-size="19" font-family="Inter,Segoe UI,Arial,sans-serif">Cross-platform applications,</text>
+<text x="42" y="224" fill="#a8b6cf" font-size="19" font-family="Inter,Segoe UI,Arial,sans-serif">reusable UI systems,</text>
+<text x="42" y="254" fill="#a8b6cf" font-size="19" font-family="Inter,Segoe UI,Arial,sans-serif">package development</text>
+<text x="42" y="308" fill="#f6f9ff" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Mobile engineering · UI systems · Packages</text>
+</svg>
