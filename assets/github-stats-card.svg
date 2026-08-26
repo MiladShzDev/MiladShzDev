@@ -18,7 +18,7 @@
 <rect x="38" y="250" width="220" height="96" rx="18" fill="#111e3f" stroke="#315083"/>
 <circle cx="60" cy="277" r="7" fill="#19e6a2"/>
 <text x="76" y="284" fill="#a8b6cf" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Commits · 1Y</text>
-<text x="56" y="322" fill="#f6f9ff" font-size="36" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">236</text>
+<text x="56" y="322" fill="#f6f9ff" font-size="36" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">237</text>
 <rect x="280" y="250" width="220" height="96" rx="18" fill="#111e3f" stroke="#315083"/>
 <circle cx="302" cy="277" r="7" fill="#f0883e"/>
 <text x="318" y="284" fill="#a8b6cf" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Pull Requests · 1Y</text>
@@ -29,7 +29,7 @@
 <text x="540" y="322" fill="#f6f9ff" font-size="36" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">19</text>
 <circle cx="853" cy="404" r="68" fill="#0a142b" stroke="#213a67" stroke-width="2"/>
 <circle cx="853" cy="404" r="58" fill="none" stroke="#1d355f" stroke-width="12"/>
-<circle cx="853" cy="404" r="58" fill="none" stroke="#18b9ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="342.6 364.4" transform="rotate(-90 853 404)"/>
-<text x="853" y="399" text-anchor="middle" fill="#f6f9ff" font-size="31" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">94%</text>
+<circle cx="853" cy="404" r="58" fill="none" stroke="#18b9ff" stroke-width="12" stroke-linecap="round" stroke-dasharray="346.2 364.4" transform="rotate(-90 853 404)"/>
+<text x="853" y="399" text-anchor="middle" fill="#f6f9ff" font-size="31" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">95%</text>
 <text x="853" y="422" text-anchor="middle" fill="#a8b6cf" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">activity</text>
 </svg>
