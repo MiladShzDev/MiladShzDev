@@ -201,30 +201,12 @@ A Flutter package for customizable **curve, horizontal, and vertical gauge compo
 ## ⚙️ GitHub Analytics
 
 <div align="center">
-
-<table>
-<tr>
-<td width="50%" valign="top" align="center">
-
-### 📊 My GitHub Statistics
-
-<img src="./assets/github-stats-card.svg" width="100%" alt="My GitHub Statistics" />
-
-</td>
-<td width="50%" valign="top" align="center">
-
-### 🧠 My Programming Languages
-
-<img src="./assets/github-languages-card.svg" width="100%" alt="My Programming Languages with percentage bars" />
-
-</td>
-</tr>
-</table>
-
-<br/>
+<p>
+  <img src="./assets/github-stats-card.svg" width="49%" alt="My GitHub Statistics" />
+  <img src="./assets/github-languages-card.svg" width="49%" alt="My Programming Languages" />
+</p>
 
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=MiladShzDev&theme=github-compact&hide_border=true&area=true&custom_title=Contribution%20Activity" width="100%" alt="Contribution activity graph" />
-
 </div>
 
 ---
