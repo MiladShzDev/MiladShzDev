@@ -28,6 +28,7 @@ jobs:
           from __future__ import annotations
           import datetime as dt
           import html
+          import math
           import os
           from pathlib import Path
           import requests
@@ -50,18 +51,18 @@ jobs:
               f"https://api.github.com/users/{USER}/repos",
               params={"per_page": 100, "type": "owner", "sort": "updated"},
           )
-          repos = [repo for repo in repos if not repo.get("fork") and not repo.get("archived")]
+          repos = [r for r in repos if not r.get("fork") and not r.get("archived")]
 
-          total_stars = sum(repo.get("stargazers_count", 0) for repo in repos)
-          total_forks = sum(repo.get("forks_count", 0) for repo in repos)
+          total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+          total_forks = sum(r.get("forks_count", 0) for r in repos)
 
           language_bytes = {}
           for repo in repos:
               try:
-                  repo_languages = get(f"https://api.github.com/repos/{USER}/{repo['name']}/languages")
+                  data = get(f"https://api.github.com/repos/{USER}/{repo['name']}/languages")
               except Exception:
                   continue
-              for language, amount in repo_languages.items():
+              for language, amount in data.items():
                   language_bytes[language] = language_bytes.get(language, 0) + amount
 
           ranked = sorted(language_bytes.items(), key=lambda item: item[1], reverse=True)[:8]
@@ -104,90 +105,118 @@ jobs:
                   timeout=20,
               )
               if response.ok:
-                  contribution_data = (
+                  collection = (
                       response.json().get("data", {}).get("user", {}) or {}
                   ).get("contributionsCollection", {}) or {}
-                  contributions.update(contribution_data)
+                  contributions.update(collection)
           except Exception:
               pass
 
           def esc(value: object) -> str:
               return html.escape(str(value), quote=True)
 
-          # ---------- My GitHub Statistics ----------
-          stat_items = [
-              ("REPOSITORIES", len(repos), "#58a6ff"),
-              ("STARS", total_stars, "#f2cc60"),
-              ("FORKS", total_forks, "#a371f7"),
-              ("COMMITS · 1Y", contributions["totalCommitContributions"], "#3fb950"),
-              ("PULL REQUESTS · 1Y", contributions["totalPullRequestContributions"], "#f0883e"),
-              ("ISSUES · 1Y", contributions["totalIssueContributions"], "#db61a2"),
+          palette = [
+              "#ff6b35", "#f7df1e", "#3178c6", "#00d084",
+              "#f1e05a", "#a97bff", "#ff4f81", "#4ea1ff",
           ]
 
           def stats_svg() -> str:
-              width, height = 1100, 360
+              W, H = 960, 500
+              bg, panel = "#071126", "#0b1530"
+              muted, white, cyan = "#a8b6cf", "#f6f9ff", "#18b9ff"
               out = [
-                  f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-                  '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
-                  '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My GitHub Statistics</text>',
-                  '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Live profile metrics · rolling 365-day contribution window</text>',
+                  f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+                  f'<rect x="2" y="2" width="{W-4}" height="{H-4}" rx="30" fill="{bg}" stroke="#53678f" stroke-width="2"/>',
+                  f'<rect x="18" y="18" width="{W-36}" height="{H-36}" rx="24" fill="{panel}" stroke="#223b69" stroke-width="2"/>',
+                  f'<text x="42" y="66" fill="{cyan}" font-size="34" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">My GitHub Statistics</text>',
+                  f'<text x="42" y="96" fill="{muted}" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif">Profile activity · rolling 365-day window</text>',
               ]
 
-              for index, (label, value, accent) in enumerate(stat_items):
-                  row, col = divmod(index, 3)
-                  x = 34 + col * 348
-                  y = 105 + row * 112
-                  out.extend([
-                      f'<rect x="{x}" y="{y}" width="324" height="88" rx="16" fill="#161b22" stroke="#30363d"/>',
-                      f'<circle cx="{x + 24}" cy="{y + 26}" r="6" fill="{accent}"/>',
-                      f'<text x="{x + 40}" y="{y + 31}" fill="#8b949e" font-size="11" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(label)}</text>',
-                      f'<text x="{x + 20}" y="{y + 65}" fill="#f0f6fc" font-size="28" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{value:,}</text>',
-                  ])
+              stats = [
+                  ("Repositories", len(repos), "#58a6ff"),
+                  ("Stars", total_stars, "#f2cc60"),
+                  ("Forks", total_forks, "#a371f7"),
+                  ("Commits · 1Y", contributions["totalCommitContributions"], "#19e6a2"),
+                  ("Pull Requests · 1Y", contributions["totalPullRequestContributions"], "#f0883e"),
+                  ("Issues · 1Y", contributions["totalIssueContributions"], "#db61a2"),
+              ]
 
-              out.append("</svg>")
+              for i, (label, value, accent) in enumerate(stats):
+                  row, col = divmod(i, 3)
+                  x = 38 + col * 242
+                  y = 132 + row * 118
+                  out += [
+                      f'<rect x="{x}" y="{y}" width="220" height="96" rx="18" fill="#111e3f" stroke="#315083"/>',
+                      f'<circle cx="{x+22}" cy="{y+27}" r="7" fill="{accent}"/>',
+                      f'<text x="{x+38}" y="{y+34}" fill="{muted}" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(label)}</text>',
+                      f'<text x="{x+18}" y="{y+72}" fill="{white}" font-size="36" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{value:,}</text>',
+                  ]
+
+              activity = (
+                  contributions["totalCommitContributions"]
+                  + contributions["totalPullRequestContributions"]
+                  + contributions["totalIssueContributions"]
+              )
+              score = min(100, round(activity / 3))
+              radius = 58
+              circumference = 2 * math.pi * radius
+              dash = circumference * score / 100
+              out += [
+                  f'<circle cx="853" cy="404" r="68" fill="#0a142b" stroke="#213a67" stroke-width="2"/>',
+                  f'<circle cx="853" cy="404" r="58" fill="none" stroke="#1d355f" stroke-width="12"/>',
+                  f'<circle cx="853" cy="404" r="58" fill="none" stroke="{cyan}" stroke-width="12" stroke-linecap="round" stroke-dasharray="{dash:.1f} {circumference:.1f}" transform="rotate(-90 853 404)"/>',
+                  f'<text x="853" y="399" text-anchor="middle" fill="{white}" font-size="31" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{score}%</text>',
+                  f'<text x="853" y="422" text-anchor="middle" fill="{muted}" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">activity</text>',
+              ]
+              out.append('</svg>')
               return "\n".join(out)
 
-          # ---------- My Programming Languages ----------
-          palette = [
-              "#58a6ff", "#3fb950", "#f2cc60", "#a371f7",
-              "#f0883e", "#db61a2", "#79c0ff", "#56d364",
-          ]
-
           def languages_svg() -> str:
-              width, height = 1100, 118 + max(1, len(languages)) * 46
+              W, H = 960, 500
+              bg, panel = "#071126", "#0b1530"
+              muted, white, cyan = "#a8b6cf", "#f6f9ff", "#18b9ff"
               out = [
-                  f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}">',
-                  '<rect width="100%" height="100%" rx="24" fill="#0d1117"/>',
-                  '<text x="42" y="52" fill="#f0f6fc" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">My Programming Languages</text>',
-                  '<text x="42" y="80" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif">Share of tracked source-code bytes across owned, non-fork repositories</text>',
+                  f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+                  f'<rect x="2" y="2" width="{W-4}" height="{H-4}" rx="30" fill="{bg}" stroke="#53678f" stroke-width="2"/>',
+                  f'<rect x="18" y="18" width="{W-36}" height="{H-36}" rx="24" fill="{panel}" stroke="#223b69" stroke-width="2"/>',
+                  f'<text x="42" y="66" fill="{cyan}" font-size="34" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">My Programming Languages</text>',
+                  f'<text x="42" y="96" fill="{muted}" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif">Repository language distribution by source-code bytes</text>',
               ]
 
-              bar_x, bar_width = 280, 700
-              stacked_x = bar_x
-              # Top stacked bar matching the visual template.
-              for index, (_, percent) in enumerate(languages):
-                  segment_width = max(3, bar_width * percent / 100)
-                  color = palette[index % len(palette)]
+              bar_x, bar_y, bar_w, bar_h = 42, 122, 876, 26
+              cursor = bar_x
+              for i, (_, pct) in enumerate(languages):
+                  segment = bar_w * pct / 100
+                  if i == len(languages) - 1:
+                      segment = bar_x + bar_w - cursor
+                  if segment > 0:
+                      out.append(
+                          f'<rect x="{cursor:.2f}" y="{bar_y}" width="{max(1, segment):.2f}" height="{bar_h}" fill="{palette[i % len(palette)]}"/>'
+                      )
+                  cursor += segment
+              out.append(f'<rect x="{bar_x}" y="{bar_y}" width="{bar_w}" height="{bar_h}" rx="13" fill="none" stroke="#36527f" stroke-width="2"/>')
+
+              for i, (name, pct) in enumerate(languages):
+                  col = i % 2
+                  row = i // 2
+                  x = 46 + col * 430
+                  y = 178 + row * 68
+                  color = palette[i % len(palette)]
+                  out += [
+                      f'<circle cx="{x+7}" cy="{y+8}" r="8" fill="{color}"/>',
+                      f'<text x="{x+25}" y="{y+15}" fill="{white}" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">{esc(name)}</text>',
+                      f'<text x="{x+400}" y="{y+15}" text-anchor="end" fill="{muted}" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">{pct:.2f}%</text>',
+                      f'<rect x="{x+25}" y="{y+29}" width="375" height="11" rx="5.5" fill="#1a2c4e"/>',
+                      f'<rect x="{x+25}" y="{y+29}" width="{max(6, 375*pct/100):.2f}" height="11" rx="5.5" fill="{color}"/>',
+                  ]
+
+              if languages:
+                  top_name, top_pct = languages[0]
                   out.append(
-                      f'<rect x="{stacked_x:.1f}" y="112" width="{segment_width:.1f}" height="18" fill="{color}"/>'
+                      f'<text x="42" y="{H-32}" fill="{muted}" font-size="16" font-family="Inter,Segoe UI,Arial,sans-serif">Top language: <tspan fill="{white}" font-weight="800">{esc(top_name)} · {top_pct:.2f}%</tspan></text>'
                   )
-                  stacked_x += segment_width
-              out.extend([
-                  '<rect x="980" y="112" width="0" height="18" fill="none"/>',
-              ])
 
-              for index, (name, percent) in enumerate(languages):
-                  y = 158 + index * 46
-                  color = palette[index % len(palette)]
-                  out.extend([
-                      f'<circle cx="50" cy="{y + 6}" r="7" fill="{color}"/>',
-                      f'<text x="68" y="{y + 11}" fill="#f0f6fc" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">{esc(name)}</text>',
-                      f'<text x="300" y="{y + 11}" fill="#8b949e" font-size="14" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="600">{percent:.2f}%</text>',
-                      f'<rect x="340" y="{y - 3}" width="640" height="18" rx="9" fill="#21262d"/>',
-                      f'<rect x="340" y="{y - 3}" width="{max(4, 640 * percent / 100):.1f}" height="18" rx="9" fill="{color}"/>',
-                  ])
-
-              out.append("</svg>")
+              out.append('</svg>')
               return "\n".join(out)
 
           Path("assets").mkdir(exist_ok=True)
@@ -204,5 +233,5 @@ jobs:
             echo "No analytics changes."
             exit 0
           fi
-          git commit -m "chore: update GitHub analytics cards"
+          git commit -m "chore: refresh GitHub analytics cards"
           git push
