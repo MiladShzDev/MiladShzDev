@@ -33,7 +33,7 @@
 <line x1="54" y1="234.7" x2="1044" y2="234.7" stroke="#1f3156" stroke-width="1"/>
 <line x1="54" y1="288.0" x2="1044" y2="288.0" stroke="#1f3156" stroke-width="1"/>
 <text x="54" y="324" fill="#a8b6cf" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif">Total contributions</text>
-<text x="54" y="346" fill="#f6f9ff" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">294</text>
+<text x="54" y="346" fill="#f6f9ff" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">293</text>
 <text x="290" y="324" fill="#a8b6cf" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif">Daily average</text>
 <text x="290" y="346" fill="#f6f9ff" font-size="24" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.8</text>
 <text x="506" y="324" fill="#a8b6cf" font-size="15" font-family="Inter,Segoe UI,Arial,sans-serif">Peak day</text>
