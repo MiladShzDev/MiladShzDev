@@ -3,42 +3,48 @@
 <rect x="18" y="18" width="924" height="464" rx="24" fill="#0b1530" stroke="#223b69" stroke-width="2"/>
 <text x="42" y="66" fill="#18b9ff" font-size="34" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">My Programming Languages</text>
 <text x="42" y="96" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif">Repository language distribution by source-code bytes</text>
-<rect x="42.00" y="122" width="856.05" height="26" fill="#ff6b35"/>
-<rect x="898.05" y="122" width="18.64" height="26" fill="#f7df1e"/>
-<rect x="916.69" y="122" width="1.00" height="26" fill="#3178c6"/>
-<rect x="917.66" y="122" width="1.00" height="26" fill="#00d084"/>
-<rect x="917.94" y="122" width="1.00" height="26" fill="#f1e05a"/>
-<rect x="917.98" y="122" width="1.00" height="26" fill="#a97bff"/>
+<rect x="42.00" y="122" width="852.42" height="26" fill="#ff6b35"/>
+<rect x="894.42" y="122" width="18.56" height="26" fill="#f7df1e"/>
+<rect x="912.97" y="122" width="3.72" height="26" fill="#3178c6"/>
+<rect x="916.69" y="122" width="1.00" height="26" fill="#00d084"/>
+<rect x="917.67" y="122" width="1.00" height="26" fill="#f1e05a"/>
+<rect x="917.94" y="122" width="1.00" height="26" fill="#a97bff"/>
+<rect x="917.98" y="122" width="1.00" height="26" fill="#ff4f81"/>
 <rect x="42" y="122" width="876" height="26" rx="13" fill="none" stroke="#36527f" stroke-width="2"/>
 <circle cx="53" cy="186" r="8" fill="#ff6b35"/>
 <text x="71" y="193" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">JavaScript</text>
-<text x="446" y="193" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">97.72%</text>
+<text x="446" y="193" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">97.31%</text>
 <rect x="71" y="207" width="375" height="11" rx="5.5" fill="#1a2c4e"/>
-<rect x="71" y="207" width="366.46" height="11" rx="5.5" fill="#ff6b35"/>
+<rect x="71" y="207" width="364.90" height="11" rx="5.5" fill="#ff6b35"/>
 <circle cx="483" cy="186" r="8" fill="#f7df1e"/>
 <text x="501" y="193" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Dart</text>
-<text x="876" y="193" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">2.13%</text>
+<text x="876" y="193" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">2.12%</text>
 <rect x="501" y="207" width="375" height="11" rx="5.5" fill="#1a2c4e"/>
-<rect x="501" y="207" width="7.98" height="11" rx="5.5" fill="#f7df1e"/>
+<rect x="501" y="207" width="7.94" height="11" rx="5.5" fill="#f7df1e"/>
 <circle cx="53" cy="254" r="8" fill="#3178c6"/>
-<text x="71" y="261" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">HTML</text>
-<text x="446" y="261" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.11%</text>
+<text x="71" y="261" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Python</text>
+<text x="446" y="261" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.42%</text>
 <rect x="71" y="275" width="375" height="11" rx="5.5" fill="#1a2c4e"/>
 <rect x="71" y="275" width="6.00" height="11" rx="5.5" fill="#3178c6"/>
 <circle cx="483" cy="254" r="8" fill="#00d084"/>
-<text x="501" y="261" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Swift</text>
-<text x="876" y="261" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.03%</text>
+<text x="501" y="261" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">HTML</text>
+<text x="876" y="261" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.11%</text>
 <rect x="501" y="275" width="375" height="11" rx="5.5" fill="#1a2c4e"/>
 <rect x="501" y="275" width="6.00" height="11" rx="5.5" fill="#00d084"/>
 <circle cx="53" cy="322" r="8" fill="#f1e05a"/>
-<text x="71" y="329" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Kotlin</text>
-<text x="446" y="329" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.01%</text>
+<text x="71" y="329" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Swift</text>
+<text x="446" y="329" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.03%</text>
 <rect x="71" y="343" width="375" height="11" rx="5.5" fill="#1a2c4e"/>
 <rect x="71" y="343" width="6.00" height="11" rx="5.5" fill="#f1e05a"/>
 <circle cx="483" cy="322" r="8" fill="#a97bff"/>
-<text x="501" y="329" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Objective-C</text>
-<text x="876" y="329" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.00%</text>
+<text x="501" y="329" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Kotlin</text>
+<text x="876" y="329" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.01%</text>
 <rect x="501" y="343" width="375" height="11" rx="5.5" fill="#1a2c4e"/>
 <rect x="501" y="343" width="6.00" height="11" rx="5.5" fill="#a97bff"/>
-<text x="42" y="468" fill="#a8b6cf" font-size="16" font-family="Inter,Segoe UI,Arial,sans-serif">Top language: <tspan fill="#f6f9ff" font-weight="800">JavaScript · 97.72%</tspan></text>
+<circle cx="53" cy="390" r="8" fill="#ff4f81"/>
+<text x="71" y="397" fill="#f6f9ff" font-size="18" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="700">Objective-C</text>
+<text x="446" y="397" text-anchor="end" fill="#a8b6cf" font-size="17" font-family="Inter,Segoe UI,Arial,sans-serif" font-weight="800">0.00%</text>
+<rect x="71" y="411" width="375" height="11" rx="5.5" fill="#1a2c4e"/>
+<rect x="71" y="411" width="6.00" height="11" rx="5.5" fill="#ff4f81"/>
+<text x="42" y="468" fill="#a8b6cf" font-size="16" font-family="Inter,Segoe UI,Arial,sans-serif">Top language: <tspan fill="#f6f9ff" font-weight="800">JavaScript · 97.31%</tspan></text>
 </svg>
